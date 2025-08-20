@@ -1,0 +1,201 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\abdul\\Source\\Repos\\JWTsample\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0B4C76DF-EBA7-46DE-8252-59EE512874C0}|JWTsample.csproj|c:\\users\\abdul\\source\\repos\\jwtsample\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B4C76DF-EBA7-46DE-8252-59EE512874C0}|JWTsample.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B4C76DF-EBA7-46DE-8252-59EE512874C0}|JWTsample.csproj|c:\\users\\abdul\\source\\repos\\jwtsample\\controllers\\passengerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B4C76DF-EBA7-46DE-8252-59EE512874C0}|JWTsample.csproj|solutionrelative:controllers\\passengerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B4C76DF-EBA7-46DE-8252-59EE512874C0}|JWTsample.csproj|c:\\users\\abdul\\source\\repos\\jwtsample\\models\\passengers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B4C76DF-EBA7-46DE-8252-59EE512874C0}|JWTsample.csproj|solutionrelative:models\\passengers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B4C76DF-EBA7-46DE-8252-59EE512874C0}|JWTsample.csproj|c:\\users\\abdul\\source\\repos\\jwtsample\\controllers\\tokencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B4C76DF-EBA7-46DE-8252-59EE512874C0}|JWTsample.csproj|solutionrelative:controllers\\tokencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B4C76DF-EBA7-46DE-8252-59EE512874C0}|JWTsample.csproj|c:\\users\\abdul\\source\\repos\\jwtsample\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B4C76DF-EBA7-46DE-8252-59EE512874C0}|JWTsample.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B4C76DF-EBA7-46DE-8252-59EE512874C0}|JWTsample.csproj|c:\\users\\abdul\\source\\repos\\jwtsample\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B4C76DF-EBA7-46DE-8252-59EE512874C0}|JWTsample.csproj|solutionrelative:controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B4C76DF-EBA7-46DE-8252-59EE512874C0}|JWTsample.csproj|c:\\users\\abdul\\source\\repos\\jwtsample\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{0B4C76DF-EBA7-46DE-8252-59EE512874C0}|JWTsample.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B4C76DF-EBA7-46DE-8252-59EE512874C0}|JWTsample.csproj|c:\\users\\abdul\\source\\repos\\jwtsample\\models\\adddbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B4C76DF-EBA7-46DE-8252-59EE512874C0}|JWTsample.csproj|solutionrelative:models\\adddbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B4C76DF-EBA7-46DE-8252-59EE512874C0}|JWTsample.csproj|c:\\users\\abdul\\source\\repos\\jwtsample\\migrations\\20250819121610_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B4C76DF-EBA7-46DE-8252-59EE512874C0}|JWTsample.csproj|solutionrelative:migrations\\20250819121610_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B4C76DF-EBA7-46DE-8252-59EE512874C0}|JWTsample.csproj|c:\\users\\abdul\\source\\repos\\jwtsample\\jwtsample.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{0B4C76DF-EBA7-46DE-8252-59EE512874C0}|JWTsample.csproj|solutionrelative:jwtsample.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 9,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TokenController.cs",
+              "DocumentMoniker": "C:\\Users\\abdul\\Source\\Repos\\JWTsample\\Controllers\\TokenController.cs",
+              "RelativeDocumentMoniker": "Controllers\\TokenController.cs",
+              "ToolTip": "C:\\Users\\abdul\\Source\\Repos\\JWTsample\\Controllers\\TokenController.cs",
+              "RelativeToolTip": "Controllers\\TokenController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-19T12:29:59.252Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "C:\\Users\\abdul\\Source\\Repos\\JWTsample\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UsersController.cs",
+              "ToolTip": "C:\\Users\\abdul\\Source\\Repos\\JWTsample\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "Controllers\\UsersController.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-19T12:19:20.588Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PassengersController.cs",
+              "DocumentMoniker": "C:\\Users\\abdul\\Source\\Repos\\JWTsample\\Controllers\\PassengersController.cs",
+              "RelativeDocumentMoniker": "Controllers\\PassengersController.cs",
+              "ToolTip": "C:\\Users\\abdul\\Source\\Repos\\JWTsample\\Controllers\\PassengersController.cs",
+              "RelativeToolTip": "Controllers\\PassengersController.cs",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAowHIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-19T12:18:38.421Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "20250819121610_init.cs",
+              "DocumentMoniker": "C:\\Users\\abdul\\Source\\Repos\\JWTsample\\Migrations\\20250819121610_init.cs",
+              "RelativeDocumentMoniker": "Migrations\\20250819121610_init.cs",
+              "ToolTip": "C:\\Users\\abdul\\Source\\Repos\\JWTsample\\Migrations\\20250819121610_init.cs",
+              "RelativeToolTip": "Migrations\\20250819121610_init.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-19T12:16:10.864Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\abdul\\Source\\Repos\\JWTsample\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\abdul\\Source\\Repos\\JWTsample\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAASwEEAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-19T12:12:37.468Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\abdul\\Source\\Repos\\JWTsample\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\abdul\\Source\\Repos\\JWTsample\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-08-19T12:11:47.891Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AddDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\abdul\\Source\\Repos\\JWTsample\\Models\\AddDbContext.cs",
+              "RelativeDocumentMoniker": "Models\\AddDbContext.cs",
+              "ToolTip": "C:\\Users\\abdul\\Source\\Repos\\JWTsample\\Models\\AddDbContext.cs",
+              "RelativeToolTip": "Models\\AddDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-19T12:05:39.094Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\abdul\\Source\\Repos\\JWTsample\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Models\\User.cs",
+              "ToolTip": "C:\\Users\\abdul\\Source\\Repos\\JWTsample\\Models\\User.cs",
+              "RelativeToolTip": "Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-19T11:59:18.541Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Passengers.cs",
+              "DocumentMoniker": "C:\\Users\\abdul\\Source\\Repos\\JWTsample\\Models\\Passengers.cs",
+              "RelativeDocumentMoniker": "Models\\Passengers.cs",
+              "ToolTip": "C:\\Users\\abdul\\Source\\Repos\\JWTsample\\Models\\Passengers.cs",
+              "RelativeToolTip": "Models\\Passengers.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-19T11:59:02.97Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "JWTsample.csproj",
+              "DocumentMoniker": "C:\\Users\\abdul\\Source\\Repos\\JWTsample\\JWTsample.csproj",
+              "RelativeDocumentMoniker": "JWTsample.csproj",
+              "ToolTip": "C:\\Users\\abdul\\Source\\Repos\\JWTsample\\JWTsample.csproj",
+              "RelativeToolTip": "JWTsample.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-08-19T11:57:53.512Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
