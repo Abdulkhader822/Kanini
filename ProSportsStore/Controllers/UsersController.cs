@@ -42,5 +42,26 @@ namespace ProSportsStore.Controllers
         [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Delete(int id) =>
             (await _repo.DeleteUser(id)) ? NoContent() : NotFound();
+
+        // Search by name/email
+        [HttpGet("search")]
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> Search([FromQuery] string keyword)
+        {
+            var results = await _repo.SearchUsers(keyword);
+            if (!results.Any()) return NotFound("No users found.");
+            return Ok(results);
+        }
+
+        // Filter by role
+        [HttpGet("filter")]
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> Filter([FromQuery] string role)
+        {
+            var results = await _repo.FilterByRole(role);
+            if (!results.Any()) return NotFound($"No users with role '{role}'.");
+            return Ok(results);
+        }
+
     }
 }

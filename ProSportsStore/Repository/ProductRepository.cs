@@ -46,5 +46,22 @@ namespace ProSportsStore.Repository
             await _context.SaveChangesAsync();
             return true;
         }
+
+        public async Task<IEnumerable<Product>> SearchProducts(string keyword)
+        {
+            return await _context.Products
+                .Where(p => p.Name.Contains(keyword) || p.Category.Contains(keyword))
+                .AsNoTracking()
+                .ToListAsync();
+        }
+
+        public async Task<IEnumerable<Product>> FilterByPrice(decimal minPrice, decimal maxPrice)
+        {
+            return await _context.Products
+                .Where(p => p.Price >= minPrice && p.Price <= maxPrice)
+                .AsNoTracking()
+                .ToListAsync();
+        }
+
     }
 }

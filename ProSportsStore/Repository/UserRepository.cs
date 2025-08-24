@@ -60,5 +60,21 @@ namespace ProSportsStore.Repository
             await _context.SaveChangesAsync();
             return true;
         }
+        public async Task<IEnumerable<User>> SearchUsers(string keyword)
+        {
+            return await _context.Users
+                .Where(u => u.UserName.Contains(keyword) || u.Email.Contains(keyword))
+                .AsNoTracking()
+                .ToListAsync();
+        }
+
+        public async Task<IEnumerable<User>> FilterByRole(string role)
+        {
+            return await _context.Users
+                .Where(u => u.Role == role)
+                .AsNoTracking()
+                .ToListAsync();
+        }
+
     }
 }

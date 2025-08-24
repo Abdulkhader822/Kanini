@@ -3,8 +3,15 @@
   "WorkspaceRootPath": "C:\\Users\\abdul\\Source\\Repos\\ProSportsStore\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CBF2B7DF-949E-4EF7-9324-6DBB36C27579}|ProSportsStore.csproj|c:\\users\\abdul\\source\\repos\\prosportsstore\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CBF2B7DF-949E-4EF7-9324-6DBB36C27579}|ProSportsStore.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\abdul\\Source\\Repos\\Kanini\\ProSportsStore\\Controllers\\ProductsController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBF2B7DF-949E-4EF7-9324-6DBB36C27579}|ProSportsStore.csproj|c:\\users\\abdul\\source\\repos\\prosportsstore\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBF2B7DF-949E-4EF7-9324-6DBB36C27579}|ProSportsStore.csproj|solutionrelative:controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBF2B7DF-949E-4EF7-9324-6DBB36C27579}|ProSportsStore.csproj|c:\\users\\abdul\\source\\repos\\prosportsstore\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBF2B7DF-949E-4EF7-9324-6DBB36C27579}|ProSportsStore.csproj|solutionrelative:dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CBF2B7DF-949E-4EF7-9324-6DBB36C27579}|ProSportsStore.csproj|c:\\users\\abdul\\source\\repos\\prosportsstore\\repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -15,12 +22,20 @@
       "RelativeMoniker": "D:0:0:{CBF2B7DF-949E-4EF7-9324-6DBB36C27579}|ProSportsStore.csproj|solutionrelative:interface\\iuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CBF2B7DF-949E-4EF7-9324-6DBB36C27579}|ProSportsStore.csproj|c:\\users\\abdul\\source\\repos\\prosportsstore\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CBF2B7DF-949E-4EF7-9324-6DBB36C27579}|ProSportsStore.csproj|solutionrelative:dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CBF2B7DF-949E-4EF7-9324-6DBB36C27579}|ProSportsStore.csproj|c:\\users\\abdul\\source\\repos\\prosportsstore\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBF2B7DF-949E-4EF7-9324-6DBB36C27579}|ProSportsStore.csproj|solutionrelative:controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CBF2B7DF-949E-4EF7-9324-6DBB36C27579}|ProSportsStore.csproj|c:\\users\\abdul\\source\\repos\\prosportsstore\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CBF2B7DF-949E-4EF7-9324-6DBB36C27579}|ProSportsStore.csproj|solutionrelative:controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CBF2B7DF-949E-4EF7-9324-6DBB36C27579}|ProSportsStore.csproj|c:\\users\\abdul\\source\\repos\\prosportsstore\\repository\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBF2B7DF-949E-4EF7-9324-6DBB36C27579}|ProSportsStore.csproj|solutionrelative:repository\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBF2B7DF-949E-4EF7-9324-6DBB36C27579}|ProSportsStore.csproj|c:\\users\\abdul\\source\\repos\\prosportsstore\\interface\\iproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBF2B7DF-949E-4EF7-9324-6DBB36C27579}|ProSportsStore.csproj|solutionrelative:interface\\iproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBF2B7DF-949E-4EF7-9324-6DBB36C27579}|ProSportsStore.csproj|c:\\users\\abdul\\source\\repos\\prosportsstore\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBF2B7DF-949E-4EF7-9324-6DBB36C27579}|ProSportsStore.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CBF2B7DF-949E-4EF7-9324-6DBB36C27579}|ProSportsStore.csproj|c:\\users\\abdul\\source\\repos\\prosportsstore\\controllers\\token.controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -67,10 +82,6 @@
       "RelativeMoniker": "D:0:0:{CBF2B7DF-949E-4EF7-9324-6DBB36C27579}|ProSportsStore.csproj|solutionrelative:repository\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CBF2B7DF-949E-4EF7-9324-6DBB36C27579}|ProSportsStore.csproj|c:\\users\\abdul\\source\\repos\\prosportsstore\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CBF2B7DF-949E-4EF7-9324-6DBB36C27579}|ProSportsStore.csproj|solutionrelative:controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CBF2B7DF-949E-4EF7-9324-6DBB36C27579}|ProSportsStore.csproj|c:\\users\\abdul\\source\\repos\\prosportsstore\\migrations\\20250821102136_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CBF2B7DF-949E-4EF7-9324-6DBB36C27579}|ProSportsStore.csproj|solutionrelative:migrations\\20250821102136_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -103,24 +114,12 @@
       "RelativeMoniker": "D:0:0:{CBF2B7DF-949E-4EF7-9324-6DBB36C27579}|ProSportsStore.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\abdul\\Source\\Repos\\ProSportsStore\\Migrations\\20250823105113_InitialFix.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20250823105113_InitialFix.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CBF2B7DF-949E-4EF7-9324-6DBB36C27579}|ProSportsStore.csproj|c:\\users\\abdul\\source\\repos\\prosportsstore\\repository\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CBF2B7DF-949E-4EF7-9324-6DBB36C27579}|ProSportsStore.csproj|solutionrelative:repository\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CBF2B7DF-949E-4EF7-9324-6DBB36C27579}|ProSportsStore.csproj|c:\\users\\abdul\\source\\repos\\prosportsstore\\repository\\orderitemrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CBF2B7DF-949E-4EF7-9324-6DBB36C27579}|ProSportsStore.csproj|solutionrelative:repository\\orderitemrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CBF2B7DF-949E-4EF7-9324-6DBB36C27579}|ProSportsStore.csproj|c:\\users\\abdul\\source\\repos\\prosportsstore\\interface\\iorderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CBF2B7DF-949E-4EF7-9324-6DBB36C27579}|ProSportsStore.csproj|solutionrelative:interface\\iorderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CBF2B7DF-949E-4EF7-9324-6DBB36C27579}|ProSportsStore.csproj|c:\\users\\abdul\\source\\repos\\prosportsstore\\interface\\iproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CBF2B7DF-949E-4EF7-9324-6DBB36C27579}|ProSportsStore.csproj|solutionrelative:interface\\iproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CBF2B7DF-949E-4EF7-9324-6DBB36C27579}|ProSportsStore.csproj|c:\\users\\abdul\\source\\repos\\prosportsstore\\dtos\\productdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -145,6 +144,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\abdul\\Source\\Repos\\ProSportsStore\\Migrations\\20250821101136_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20250821101136_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBF2B7DF-949E-4EF7-9324-6DBB36C27579}|ProSportsStore.csproj|c:\\users\\abdul\\source\\repos\\prosportsstore\\migrations\\20250823105113_initialfix.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBF2B7DF-949E-4EF7-9324-6DBB36C27579}|ProSportsStore.csproj|solutionrelative:migrations\\20250823105113_initialfix.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -154,11 +157,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 41,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 25,
               "Title": "ITokenGenerate.cs",
               "DocumentMoniker": "C:\\Users\\abdul\\Source\\Repos\\ProSportsStore\\IAuthentication\\ITokenGenerate.cs",
               "RelativeDocumentMoniker": "IAuthentication\\ITokenGenerate.cs",
@@ -167,7 +170,19 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-23T07:00:20.332Z",
-              "IsPinned": true,
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "C:\\Users\\abdul\\Source\\Repos\\Kanini\\ProSportsStore\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "..\\Kanini\\ProSportsStore\\Controllers\\ProductsController.cs",
+              "ToolTip": "C:\\Users\\abdul\\Source\\Repos\\Kanini\\ProSportsStore\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "..\\Kanini\\ProSportsStore\\Controllers\\ProductsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-24T13:15:57.166Z",
               "EditorCaption": ""
             },
             {
@@ -191,12 +206,8 @@
               "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 15,
               "Title": "OrderController.cs",
               "DocumentMoniker": "C:\\Users\\abdul\\Source\\Repos\\ProSportsStore\\Controllers\\OrderController.cs",
               "RelativeDocumentMoniker": "Controllers\\OrderController.cs",
@@ -204,12 +215,11 @@
               "RelativeToolTip": "Controllers\\OrderController.cs",
               "ViewState": "AgIAACkAAAAAAAAAAAAgwHQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-23T16:39:32.011Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-23T16:39:32.011Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 26,
               "Title": "ProSportsStore.http",
               "DocumentMoniker": "C:\\Users\\abdul\\Source\\Repos\\ProSportsStore\\ProSportsStore.http",
               "RelativeDocumentMoniker": "ProSportsStore.http",
@@ -217,12 +227,11 @@
               "RelativeToolTip": "ProSportsStore.http",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2025-08-23T12:17:41.434Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-23T12:17:41.434Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 27,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\abdul\\Source\\Repos\\ProSportsStore\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "Properties\\launchSettings.json",
@@ -230,12 +239,11 @@
               "RelativeToolTip": "Properties\\launchSettings.json",
               "ViewState": "AgIAABUAAAAAAAAAAAAAAAgAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-08-23T12:16:46.273Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-23T12:16:46.273Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 36,
               "Title": "20250823105113_InitialFix.cs",
               "DocumentMoniker": "C:\\Users\\abdul\\Source\\Repos\\ProSportsStore\\Migrations\\20250823105113_InitialFix.cs",
               "RelativeDocumentMoniker": "Migrations\\20250823105113_InitialFix.cs",
@@ -243,12 +251,11 @@
               "RelativeToolTip": "Migrations\\20250823105113_InitialFix.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-23T10:51:14.076Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-23T10:51:14.076Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 22,
               "Title": "20250823084517_N.cs",
               "DocumentMoniker": "C:\\Users\\abdul\\Source\\Repos\\ProSportsStore\\Migrations\\20250823084517_N.cs",
               "RelativeDocumentMoniker": "Migrations\\20250823084517_N.cs",
@@ -256,12 +263,11 @@
               "RelativeToolTip": "Migrations\\20250823084517_N.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-23T08:45:18.083Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-23T08:45:18.083Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "Token.Controller.cs",
               "DocumentMoniker": "C:\\Users\\abdul\\Source\\Repos\\ProSportsStore\\Controllers\\Token.Controller.cs",
               "RelativeDocumentMoniker": "Controllers\\Token.Controller.cs",
@@ -269,12 +275,11 @@
               "RelativeToolTip": "Controllers\\Token.Controller.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAAAAwCEAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-23T08:19:49.495Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-23T08:19:49.495Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 21,
               "Title": "20250823075938_New.cs",
               "DocumentMoniker": "C:\\Users\\abdul\\Source\\Repos\\ProSportsStore\\Migrations\\20250823075938_New.cs",
               "RelativeDocumentMoniker": "Migrations\\20250823075938_New.cs",
@@ -282,8 +287,7 @@
               "RelativeToolTip": "Migrations\\20250823075938_New.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-23T07:59:39.51Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-23T07:59:39.51Z"
             },
             {
               "$type": "Document",
@@ -295,12 +299,11 @@
               "RelativeToolTip": "Interface\\IToken.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-23T07:38:29.324Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-23T07:38:29.324Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 11,
               "Title": "TokenService.cs",
               "DocumentMoniker": "C:\\Users\\abdul\\Source\\Repos\\ProSportsStore\\Services\\TokenService.cs",
               "RelativeDocumentMoniker": "Services\\TokenService.cs",
@@ -308,12 +311,11 @@
               "RelativeToolTip": "Services\\TokenService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-23T07:01:39.429Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-23T07:01:39.429Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 14,
               "Title": "OrderItemController.cs",
               "DocumentMoniker": "C:\\Users\\abdul\\Source\\Repos\\ProSportsStore\\Controllers\\OrderItemController.cs",
               "RelativeDocumentMoniker": "Controllers\\OrderItemController.cs",
@@ -321,38 +323,36 @@
               "RelativeToolTip": "Controllers\\OrderItemController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAHMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-23T06:50:36.187Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-23T06:50:36.187Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 5,
               "Title": "ProductsController.cs",
               "DocumentMoniker": "C:\\Users\\abdul\\Source\\Repos\\ProSportsStore\\Controllers\\ProductsController.cs",
               "RelativeDocumentMoniker": "Controllers\\ProductsController.cs",
               "ToolTip": "C:\\Users\\abdul\\Source\\Repos\\ProSportsStore\\Controllers\\ProductsController.cs",
               "RelativeToolTip": "Controllers\\ProductsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAApAAAAAAAAAA==",
+              "ViewState": "AgIAADEAAAAAAAAAAAAQwEIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-23T05:35:07.362Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-23T05:35:07.362Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "UsersController.cs",
               "DocumentMoniker": "C:\\Users\\abdul\\Source\\Repos\\ProSportsStore\\Controllers\\UsersController.cs",
               "RelativeDocumentMoniker": "Controllers\\UsersController.cs",
               "ToolTip": "C:\\Users\\abdul\\Source\\Repos\\ProSportsStore\\Controllers\\UsersController.cs",
               "RelativeToolTip": "Controllers\\UsersController.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAQwCgAAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAACsAAAAAAAAAAAAYwDMAAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-23T05:24:19.438Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 28,
               "Title": "OrderItemRepository.cs",
               "DocumentMoniker": "C:\\Users\\abdul\\Source\\Repos\\ProSportsStore\\Repository\\OrderItemRepository.cs",
               "RelativeDocumentMoniker": "Repository\\OrderItemRepository.cs",
@@ -360,12 +360,11 @@
               "RelativeToolTip": "Repository\\OrderItemRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-23T05:12:00.513Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-23T05:12:00.513Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 19,
               "Title": "OrderRepository.cs",
               "DocumentMoniker": "C:\\Users\\abdul\\Source\\Repos\\ProSportsStore\\Repository\\OrderRepository.cs",
               "RelativeDocumentMoniker": "Repository\\OrderRepository.cs",
@@ -373,38 +372,35 @@
               "RelativeToolTip": "Repository\\OrderRepository.cs",
               "ViewState": "AgIAABQAAAAAAAAAAADwvy4AAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-23T05:09:29.213Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-23T05:09:29.213Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 6,
               "Title": "ProductRepository.cs",
               "DocumentMoniker": "C:\\Users\\abdul\\Source\\Repos\\ProSportsStore\\Repository\\ProductRepository.cs",
               "RelativeDocumentMoniker": "Repository\\ProductRepository.cs",
               "ToolTip": "C:\\Users\\abdul\\Source\\Repos\\ProSportsStore\\Repository\\ProductRepository.cs",
               "RelativeToolTip": "Repository\\ProductRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAQwEAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-23T05:04:21.278Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-23T05:04:21.278Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "UserRepository.cs",
               "DocumentMoniker": "C:\\Users\\abdul\\Source\\Repos\\ProSportsStore\\Repository\\UserRepository.cs",
               "RelativeDocumentMoniker": "Repository\\UserRepository.cs",
               "ToolTip": "C:\\Users\\abdul\\Source\\Repos\\ProSportsStore\\Repository\\UserRepository.cs",
               "RelativeToolTip": "Repository\\UserRepository.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAwwDUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADsAAAAAAAAAAAAYwE0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-22T04:48:41.679Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-22T04:48:41.679Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 29,
               "Title": "IOrderItem.cs",
               "DocumentMoniker": "C:\\Users\\abdul\\Source\\Repos\\ProSportsStore\\Interface\\IOrderItem.cs",
               "RelativeDocumentMoniker": "Interface\\IOrderItem.cs",
@@ -412,12 +408,11 @@
               "RelativeToolTip": "Interface\\IOrderItem.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-21T11:04:45.868Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-21T11:04:45.868Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 17,
               "Title": "IOrder.cs",
               "DocumentMoniker": "C:\\Users\\abdul\\Source\\Repos\\ProSportsStore\\Interface\\IOrder.cs",
               "RelativeDocumentMoniker": "Interface\\IOrder.cs",
@@ -425,38 +420,35 @@
               "RelativeToolTip": "Interface\\IOrder.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-21T11:02:15.727Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-21T11:02:15.727Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 7,
               "Title": "IProduct.cs",
               "DocumentMoniker": "C:\\Users\\abdul\\Source\\Repos\\ProSportsStore\\Interface\\IProduct.cs",
               "RelativeDocumentMoniker": "Interface\\IProduct.cs",
               "ToolTip": "C:\\Users\\abdul\\Source\\Repos\\ProSportsStore\\Interface\\IProduct.cs",
               "RelativeToolTip": "Interface\\IProduct.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-21T11:00:41.773Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-21T11:00:41.773Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "IUser.cs",
               "DocumentMoniker": "C:\\Users\\abdul\\Source\\Repos\\ProSportsStore\\Interface\\IUser.cs",
               "RelativeDocumentMoniker": "Interface\\IUser.cs",
               "ToolTip": "C:\\Users\\abdul\\Source\\Repos\\ProSportsStore\\Interface\\IUser.cs",
               "RelativeToolTip": "Interface\\IUser.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAmwBIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAA+wBIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-21T10:58:09.091Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-21T10:58:09.091Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 13,
               "Title": "OrderItemDTO.cs",
               "DocumentMoniker": "C:\\Users\\abdul\\Source\\Repos\\ProSportsStore\\DTOs\\OrderItemDTO.cs",
               "RelativeDocumentMoniker": "DTOs\\OrderItemDTO.cs",
@@ -464,12 +456,11 @@
               "RelativeToolTip": "DTOs\\OrderItemDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-21T10:52:47.092Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-21T10:52:47.092Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 16,
               "Title": "OrderDTO.cs",
               "DocumentMoniker": "C:\\Users\\abdul\\Source\\Repos\\ProSportsStore\\DTOs\\OrderDTO.cs",
               "RelativeDocumentMoniker": "DTOs\\OrderDTO.cs",
@@ -477,8 +468,7 @@
               "RelativeToolTip": "DTOs\\OrderDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-21T10:50:30.014Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-21T10:50:30.014Z"
             },
             {
               "$type": "Document",
@@ -490,12 +480,11 @@
               "RelativeToolTip": "DTOs\\ProductDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-21T10:48:16.349Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-21T10:48:16.349Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 12,
               "Title": "LoginDTO.cs",
               "DocumentMoniker": "C:\\Users\\abdul\\Source\\Repos\\ProSportsStore\\DTOs\\LoginDTO.cs",
               "RelativeDocumentMoniker": "DTOs\\LoginDTO.cs",
@@ -503,12 +492,11 @@
               "RelativeToolTip": "DTOs\\LoginDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-21T10:42:26.827Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-21T10:42:26.827Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "UserDTO.cs",
               "DocumentMoniker": "C:\\Users\\abdul\\Source\\Repos\\ProSportsStore\\DTOs\\UserDTO.cs",
               "RelativeDocumentMoniker": "DTOs\\UserDTO.cs",
@@ -516,25 +504,23 @@
               "RelativeToolTip": "DTOs\\UserDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-21T10:41:32.067Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-21T10:41:32.067Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ProSportsStore",
+              "DocumentIndex": 10,
+              "Title": "ProSportsStore.csproj",
               "DocumentMoniker": "C:\\Users\\abdul\\Source\\Repos\\ProSportsStore\\ProSportsStore.csproj",
               "RelativeDocumentMoniker": "ProSportsStore.csproj",
               "ToolTip": "C:\\Users\\abdul\\Source\\Repos\\ProSportsStore\\ProSportsStore.csproj",
               "RelativeToolTip": "ProSportsStore.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-08-21T10:34:12.377Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-21T10:34:12.377Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 20,
               "Title": "20250821102136_init.cs",
               "DocumentMoniker": "C:\\Users\\abdul\\Source\\Repos\\ProSportsStore\\Migrations\\20250821102136_init.cs",
               "RelativeDocumentMoniker": "Migrations\\20250821102136_init.cs",
@@ -542,8 +528,7 @@
               "RelativeToolTip": "Migrations\\20250821102136_init.cs",
               "ViewState": "AgIAACgAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-21T10:21:36.435Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-21T10:21:36.435Z"
             },
             {
               "$type": "Document",
@@ -555,12 +540,11 @@
               "RelativeToolTip": "Migrations\\20250821101136_init.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-21T10:11:37.325Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-21T10:11:37.325Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 24,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\abdul\\Source\\Repos\\ProSportsStore\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -568,12 +552,11 @@
               "RelativeToolTip": "appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-08-21T10:08:50.613Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-21T10:08:50.613Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 23,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\abdul\\Source\\Repos\\ProSportsStore\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -581,8 +564,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-21T10:04:30.589Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-21T10:04:30.589Z"
             },
             {
               "$type": "Document",
@@ -594,8 +576,7 @@
               "RelativeToolTip": "Models\\ProSportsStoreContext.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAACoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-21T09:51:51.028Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-21T09:51:51.028Z"
             },
             {
               "$type": "Document",
@@ -607,12 +588,11 @@
               "RelativeToolTip": "Models\\OrderItem.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-21T09:44:06.362Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-21T09:44:06.362Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 18,
               "Title": "Order.cs",
               "DocumentMoniker": "C:\\Users\\abdul\\Source\\Repos\\ProSportsStore\\Models\\Order.cs",
               "RelativeDocumentMoniker": "Models\\Order.cs",
@@ -620,8 +600,7 @@
               "RelativeToolTip": "Models\\Order.cs",
               "ViewState": "AgIAAAIAAAAAAAAAAAAmwAoAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-21T09:43:07.341Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-21T09:43:07.341Z"
             },
             {
               "$type": "Document",
@@ -633,21 +612,23 @@
               "RelativeToolTip": "Models\\Product.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-21T09:42:35.552Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-21T09:42:35.552Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 8,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\abdul\\Source\\Repos\\ProSportsStore\\Models\\User.cs",
               "RelativeDocumentMoniker": "Models\\User.cs",
-              "ToolTip": "C:\\Users\\abdul\\Source\\Repos\\ProSportsStore\\Models\\User.cs*",
-              "RelativeToolTip": "Models\\User.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAHAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\abdul\\Source\\Repos\\ProSportsStore\\Models\\User.cs",
+              "RelativeToolTip": "Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-21T09:41:51.644Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-21T09:41:51.644Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
             }
           ]
         }

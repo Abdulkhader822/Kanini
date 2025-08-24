@@ -10,5 +10,9 @@ namespace ProSportsStore.Interface
         Task<Product> AddProduct(Product product);
         Task<Product> UpdateProduct(Product product);
         Task<bool> DeleteProduct(int id);
+
+        Task<IEnumerable<Product>> SearchProducts(string keyword);
+        Task<IEnumerable<Product>> FilterByPrice(decimal minPrice, decimal maxPrice);
+
     }
 }

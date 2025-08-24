@@ -45,5 +45,27 @@ namespace ProSportsStore.Controllers
         [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Delete(int id) =>
             (await _repo.DeleteProduct(id)) ? NoContent() : NotFound();
+
+
+        [HttpGet("search/{keyword}")]
+        [Authorize(Roles = "Admin,User")]
+        public async Task<IActionResult> Search(string keyword)
+        {
+            var results = await _repo.SearchProducts(keyword);
+            if (!results.Any()) return NotFound("No products match your search.");
+            return Ok(results);
+        }
+
+        [HttpGet("filter")]
+        [Authorize(Roles = "Admin,User")]
+        public async Task<IActionResult> FilterByPrice([FromQuery] decimal min, [FromQuery] decimal max)
+        {
+            var results = await _repo.FilterByPrice(min, max);
+            if (!results.Any()) return NotFound("No products found in this price range.");
+            return Ok(results);
+        }
+
     }
+
+
 }
