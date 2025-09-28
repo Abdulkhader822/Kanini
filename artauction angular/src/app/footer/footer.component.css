@@ -1,0 +1,9 @@
+
+/* Footer */
+.custom-footer {
+  background: linear-gradient(90deg, #198754, #145c32);
+  color: #f8f9fa;
+  padding: 1.5rem 0;
+  margin-top: 3rem;
+  font-size: 0.95rem;
+}

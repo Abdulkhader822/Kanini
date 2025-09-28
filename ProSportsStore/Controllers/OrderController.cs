@@ -53,7 +53,7 @@ namespace ProSportsStore.Controllers
         }
 
         [HttpPost]
-        [Authorize(Roles = "Admin,User")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Post(OrderDTO dto)
         {
             var order = new Order
@@ -74,7 +74,7 @@ namespace ProSportsStore.Controllers
                 TotalAmount = created.TotalAmount,
                 Status = created.Status
             };
-
+            
             return CreatedAtAction(nameof(Get), new { id = result.OrderId }, result);
         }
 

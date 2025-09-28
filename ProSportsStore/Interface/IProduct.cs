@@ -14,5 +14,8 @@ namespace ProSportsStore.Interface
         Task<IEnumerable<Product>> SearchProducts(string keyword);
         Task<IEnumerable<Product>> FilterByPrice(decimal minPrice, decimal maxPrice);
 
+        Task<int> CountProducts();
+        Task<bool> GetStockDecrement(int id, int quantity);
+
     }
 }

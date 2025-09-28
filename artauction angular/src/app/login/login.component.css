@@ -1,0 +1,14 @@
+/* Center the login card */
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8f9fa; /* light gray bg */
+}
+
+.card {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+}

@@ -1,0 +1,56 @@
+
+
+<!-- 🔹 Page Content -->
+<div *ngIf="artwork" class="container mt-4">
+  <h3>{{ artwork.title }}</h3>
+  <p>{{ artwork.description }}</p>
+
+  <p>
+    <strong>Auction End:</strong>
+    {{ artwork.auctionEndTime | date:'short' }}
+    <small class="text-muted">(your local time)</small>
+  </p>
+
+  <h4>
+  Current Highest Bid:
+  {{ (highest?.bidAmount ?? artwork.startingPrice) | currency:'INR':'symbol':'1.0-0' }}
+</h4>
+
+
+  <!-- 🔹 Buyers Only: Place Bid -->
+  <div *ngIf="auth.isBuyer() && !isAuctionEnded()" class="mt-3">
+    <input type="number" [(ngModel)]="bidAmount"
+      class="form-control mb-2" placeholder="Enter bid amount" />
+    <button class="btn btn-primary" (click)="placeBid()">Place Bid</button>
+  </div>
+
+  <!-- 🔹 Buyers Only: Payment -->
+  <div *ngIf="auth.isBuyer() && isAuctionEnded() && isWinner() && !lastTransactionId" class="mt-3">
+    <button class="btn btn-success" (click)="pay()">Pay & Get Receipt</button>
+  </div>
+
+  <!-- 🔹 Buyers Only: Receipt -->
+  <div *ngIf="auth.isBuyer() && lastTransactionId" class="mt-2">
+    <button class="btn btn-outline-secondary" (click)="downloadReceipt(lastTransactionId)">
+      Download Receipt
+    </button>
+  </div>
+
+  <!-- 🔹 Buyers Only: Message if not winner -->
+  <div *ngIf="auth.isBuyer() && isAuctionEnded() && !isWinner()" class="alert alert-info mt-3">
+    Auction ended. You did not win.
+  </div>
+
+  <div *ngIf="error" class="text-danger mt-2">{{ error }}</div>
+  <div *ngIf="success" class="text-success mt-2">{{ success }}</div>
+
+  <!-- 🔹 Bid History for ALL roles -->
+  <h5 class="mt-4">Bid History</h5>
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let b of bids">
+  {{ b.bidAmount | currency:'INR':'symbol':'1.0-0' }} 
+  at {{ b.bidTime | date:'short' }} (your local time)
+</li>
+
+  </ul>
+</div>

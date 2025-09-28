@@ -1,0 +1,49 @@
+
+
+<div class="container mt-4">
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <h3>Artworks</h3>
+
+    <!-- Add button only for Artist/Admin -->
+    <button *ngIf="auth.isAdmin() || auth.isArtist()" class="btn btn-success" (click)="add()">+ Add Artwork</button>
+  </div>
+
+  <div *ngIf="loading">Loading...</div>
+  <div *ngIf="error" class="alert alert-danger">{{ error }}</div>
+
+  <!-- ✅ Artwork Grid -->
+  <div class="row">
+    <div class="col-md-4 mb-4" *ngFor="let art of artworks">
+      <div class="card shadow-sm h-100">
+        <img *ngIf="art.imageBase64" [src]="'data:image/jpeg;base64,' + art.imageBase64" class="card-img-top"
+          alt="{{ art.title }}" />
+
+        <div class="card-body">
+          <h5 class="card-title">{{ art.title }}</h5>
+          <p class="card-text text-muted">{{ art.description }}</p>
+          <p><strong>Category:</strong> {{ art.category }}</p>
+          <p><strong>Starting Price:</strong> {{ art.startingPrice | currency:'INR':'symbol' }}</p>
+        </div>
+        <div class="card-footer d-flex justify-content-between">
+          <!-- Artist/Admin buttons -->
+          <div *ngIf="auth.isAdmin() || auth.isArtist()">
+            <button class="btn btn-sm btn-outline-primary me-2" (click)="edit(art.artworkId!)">Edit</button>
+            <button class="btn btn-sm btn-outline-danger" (click)="delete(art.artworkId!)">Delete</button>
+          </div>
+
+          <!-- Show Bid History button for all roles -->
+          <button *ngIf="auth.isBuyer() || auth.isAdmin() || auth.isArtist()" class="btn btn-warning btn-sm"
+            [routerLink]="['/bid', art.artworkId]">
+            View Bids
+          </button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Empty State -->
+  <div *ngIf="!loading && artworks.length === 0" class="alert alert-info">
+    No artworks found.
+  </div>
+</div>

@@ -63,5 +63,21 @@ namespace ProSportsStore.Repository
                 .ToListAsync();
         }
 
+        public async Task<int> CountProducts() =>
+          await _context.Products.CountAsync();
+
+        public async Task<bool> GetStockDecrement(int id, int quantity)
+        {
+            var product = await _context.Products.FirstOrDefaultAsync(p => p.ProductId == id);
+            if (product == null)
+                return false;
+            if (product.Stock < quantity)
+                return false;
+            product.Stock -= quantity;
+            _context.Products.Update(product);
+            await _context.SaveChangesAsync();
+            return true;
+        }
+
     }
 }

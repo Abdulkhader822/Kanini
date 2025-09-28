@@ -12,7 +12,13 @@ namespace ProSportsStore.Controllers
     public class OrderItemController : ControllerBase
     {
         private readonly IOrderItem _repo;
-        public OrderItemController(IOrderItem repo) => _repo = repo;
+        private readonly IProduct _product;
+
+        public OrderItemController(IOrderItem repo, IProduct product)
+        {
+            _repo = repo;
+            _product = product; 
+        }
 
         [HttpGet]
         [Authorize(Roles = "Admin,User")]
@@ -28,7 +34,7 @@ namespace ProSportsStore.Controllers
                 Quantity = i.Quantity,
                 Price = i.Price
             });
-
+            
             return Ok(result);
         }
 
@@ -73,6 +79,11 @@ namespace ProSportsStore.Controllers
                 Quantity = created.Quantity,
                 Price = created.Price
             };
+            bool result1=await _product.GetStockDecrement(dto.ProductId, dto.Quantity);
+            if (result1 == false)
+            {
+                BadRequest();
+            }
 
             return CreatedAtAction(nameof(Get), new { id = result.OrderItemId }, result);
         }

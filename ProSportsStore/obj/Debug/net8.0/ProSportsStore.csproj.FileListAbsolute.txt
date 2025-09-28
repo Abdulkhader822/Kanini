@@ -175,3 +175,4 @@ C:\Users\abdul\Source\Repos\ProSportsStore\obj\Debug\net8.0\refint\ProSportsStor
 C:\Users\abdul\Source\Repos\ProSportsStore\obj\Debug\net8.0\ProSportsStore.pdb
 C:\Users\abdul\Source\Repos\ProSportsStore\obj\Debug\net8.0\ProSportsStore.genruntimeconfig.cache
 C:\Users\abdul\Source\Repos\ProSportsStore\obj\Debug\net8.0\ref\ProSportsStore.dll
+C:\Users\abdul\Source\Repos\ProSportsStore\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.InMemory.dll

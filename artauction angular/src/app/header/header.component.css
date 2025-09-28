@@ -1,0 +1,24 @@
+/* Navbar */
+.custom-navbar {
+  background: linear-gradient(90deg, #20c997, #198754);
+  padding: 1.2rem 2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.custom-navbar .navbar-brand {
+  font-size: 1.8rem;
+  color: #fff !important;
+}
+
+.custom-navbar .btn {
+  border-radius: 25px;
+  background-color: #fff;
+  color: #198754;
+  transition: all 0.3s ease-in-out;
+}
+
+.custom-navbar .btn:hover {
+  background-color: #f0f0f0;
+  color: #145c32;
+}
+

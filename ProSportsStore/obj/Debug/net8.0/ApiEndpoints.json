@@ -238,6 +238,16 @@
   },
   {
     "ContainingType": "ProSportsStore.Controllers.ProductsController",
+    "Method": "Count",
+    "RelativePath": "api/Products/count",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProSportsStore.Controllers.ProductsController",
     "Method": "FilterByPrice",
     "RelativePath": "api/Products/filter",
     "HttpMethod": "GET",

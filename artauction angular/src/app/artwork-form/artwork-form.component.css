@@ -1,0 +1,10 @@
+/* Center the container */
+.container {
+  max-width: 900px;
+}
+
+/* Card images fixed height */
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}

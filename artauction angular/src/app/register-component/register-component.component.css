@@ -1,0 +1,16 @@
+/* Center the card in the middle of the page */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;  /* full screen height */
+  background-color: #f8f9fa; /* light gray background */
+}
+
+/* Card styling */
+.card {
+  width: 100%;
+  max-width: 450px;   /* limit width */
+  border-radius: 10px;
+  background: #fff;
+}

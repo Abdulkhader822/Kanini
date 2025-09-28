@@ -1,0 +1,61 @@
+
+
+<!-- ✅ Container -->
+<div class="container mt-4">
+
+  <h3>{{ isEdit ? 'Edit Artwork' : 'New Artwork' }}</h3>
+
+  <form [formGroup]="form" (ngSubmit)="save()" class="card p-4 shadow-sm">
+    <div class="mb-3">
+      <label>Title</label>
+      <input formControlName="title" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+      <label>Description</label>
+      <textarea formControlName="description" class="form-control"></textarea>
+    </div>
+
+    <div class="mb-3">
+      <label>Category</label>
+      <input formControlName="category" class="form-control" />
+    </div>
+
+   <div class="mb-3">
+  <label> UploadImage</label>
+  <input type="file" (change)="onFileSelected($event)" class="form-control" />
+</div>
+
+
+    <div class="mb-3">
+      <label>Starting Price</label>
+      <input formControlName="startingPrice" type="number" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+      <label>Auction Start</label>
+      <input formControlName="auctionStartTime" type="datetime-local" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+      <label>Auction End</label>
+      <input formControlName="auctionEndTime" type="datetime-local" class="form-control" />
+    </div>
+
+    <!-- ✅ Buttons -->
+    <div class="d-flex">
+      <button class="btn btn-primary" type="submit">
+        {{ isEdit ? 'Update Artwork' : 'Create Artwork' }}
+      </button>
+      <a class="btn btn-secondary ms-2" routerLink="/artworks">Cancel</a>
+    </div>
+  </form>
+
+  <div *ngIf="success" class="alert alert-success mt-2">{{ success }}</div>
+<div *ngIf="error" class="alert alert-danger mt-2">{{ error }}</div>
+
+
+  <!-- ✅ Artwork Grid (display all artworks in card view) -->
+
+
+</div>

@@ -65,6 +65,16 @@ namespace ProSportsStore.Controllers
             return Ok(results);
         }
 
+        // Controllers/ProductsController.cs
+        [HttpGet("count")]
+        [Authorize(Roles = "Admin,User")]
+        public async Task<IActionResult> Count()
+        {
+            var count = await _repo.CountProducts();
+            return Ok(new { TotalProducts = count });
+        }
+        
+
     }
 
 
