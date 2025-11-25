@@ -1,0 +1,6 @@
+@SkillAssesmentPortal_HostAddress = http://localhost:5216
+
+GET {{SkillAssesmentPortal_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

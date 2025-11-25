@@ -1,0 +1,1054 @@
+2025-11-07 09:37:43.569 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7186/api/Test/available - null null
+2025-11-07 09:37:43.728 +05:30 [INF] Executing endpoint 'SkillAssessmentPortal.Controllers.TestController.GetAvailableTests (SkillAssesmentPortal)'
+2025-11-07 09:37:43.736 +05:30 [INF] Route matched with {action = "GetAvailableTests", controller = "Test"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAvailableTests() on controller SkillAssessmentPortal.Controllers.TestController (SkillAssesmentPortal).
+2025-11-07 09:37:43.752 +05:30 [INF] GET /api/Test/available - Fetching available tests for users
+2025-11-07 09:37:43.753 +05:30 [INF] Filtering available tests for users
+2025-11-07 09:37:43.754 +05:30 [INF] Fetching all tests from database
+2025-11-07 09:37:44.054 +05:30 [INF] Executed DbCommand (164ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[TestId], [t].[CategoryId], [t].[CreatedAt], [t].[CreatedBy], [t].[DurationMins], [t].[TestName], [t].[TotalMarks], [t].[TotalQuestions], [c].[CategoryId], [c].[CategoryName], [c].[Description], [u].[UserId], [u].[CreatedAt], [u].[Email], [u].[Name], [u].[PasswordHash], [u].[Role]
+FROM [Tests] AS [t]
+INNER JOIN [Categories] AS [c] ON [t].[CategoryId] = [c].[CategoryId]
+INNER JOIN [Users] AS [u] ON [t].[CreatedBy] = [u].[UserId]
+2025-11-07 09:37:44.111 +05:30 [INF] Successfully retrieved 4 tests
+2025-11-07 09:37:44.115 +05:30 [INF] Fetching test levels for TestId: 1
+2025-11-07 09:37:44.227 +05:30 [INF] Executed DbCommand (66ms) [Parameters=[@__testId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[TestLevelId], [t].[DurationMins], [t].[LevelName], [t].[PassingScore], [t].[TestId], [t].[VideoLink], [q].[QuestionId], [q].[CorrectOption], [q].[OptionA], [q].[OptionB], [q].[OptionC], [q].[OptionD], [q].[QuestionText], [q].[TestLevelId]
+FROM [TestLevels] AS [t]
+LEFT JOIN [Questions] AS [q] ON [t].[TestLevelId] = [q].[TestLevelId]
+WHERE [t].[TestId] = @__testId_0
+ORDER BY [t].[TestLevelId]
+2025-11-07 09:37:44.251 +05:30 [INF] Retrieved 3 test levels for TestId: 1
+2025-11-07 09:37:44.262 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@__testLevelId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Questions] AS [q]
+WHERE [q].[TestLevelId] = @__testLevelId_0
+2025-11-07 09:37:44.270 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__testLevelId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Questions] AS [q]
+WHERE [q].[TestLevelId] = @__testLevelId_0
+2025-11-07 09:37:44.279 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__testLevelId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Questions] AS [q]
+WHERE [q].[TestLevelId] = @__testLevelId_0
+2025-11-07 09:37:44.285 +05:30 [INF] Fetching test levels for TestId: 2
+2025-11-07 09:37:44.289 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__testId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[TestLevelId], [t].[DurationMins], [t].[LevelName], [t].[PassingScore], [t].[TestId], [t].[VideoLink], [q].[QuestionId], [q].[CorrectOption], [q].[OptionA], [q].[OptionB], [q].[OptionC], [q].[OptionD], [q].[QuestionText], [q].[TestLevelId]
+FROM [TestLevels] AS [t]
+LEFT JOIN [Questions] AS [q] ON [t].[TestLevelId] = [q].[TestLevelId]
+WHERE [t].[TestId] = @__testId_0
+ORDER BY [t].[TestLevelId]
+2025-11-07 09:37:44.295 +05:30 [INF] Retrieved 3 test levels for TestId: 2
+2025-11-07 09:37:44.302 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__testLevelId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Questions] AS [q]
+WHERE [q].[TestLevelId] = @__testLevelId_0
+2025-11-07 09:37:44.305 +05:30 [INF] Fetching test levels for TestId: 4
+2025-11-07 09:37:44.309 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__testId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[TestLevelId], [t].[DurationMins], [t].[LevelName], [t].[PassingScore], [t].[TestId], [t].[VideoLink], [q].[QuestionId], [q].[CorrectOption], [q].[OptionA], [q].[OptionB], [q].[OptionC], [q].[OptionD], [q].[QuestionText], [q].[TestLevelId]
+FROM [TestLevels] AS [t]
+LEFT JOIN [Questions] AS [q] ON [t].[TestLevelId] = [q].[TestLevelId]
+WHERE [t].[TestId] = @__testId_0
+ORDER BY [t].[TestLevelId]
+2025-11-07 09:37:44.315 +05:30 [INF] Retrieved 3 test levels for TestId: 4
+2025-11-07 09:37:44.320 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__testLevelId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Questions] AS [q]
+WHERE [q].[TestLevelId] = @__testLevelId_0
+2025-11-07 09:37:44.321 +05:30 [INF] Fetching test levels for TestId: 5
+2025-11-07 09:37:44.324 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__testId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[TestLevelId], [t].[DurationMins], [t].[LevelName], [t].[PassingScore], [t].[TestId], [t].[VideoLink], [q].[QuestionId], [q].[CorrectOption], [q].[OptionA], [q].[OptionB], [q].[OptionC], [q].[OptionD], [q].[QuestionText], [q].[TestLevelId]
+FROM [TestLevels] AS [t]
+LEFT JOIN [Questions] AS [q] ON [t].[TestLevelId] = [q].[TestLevelId]
+WHERE [t].[TestId] = @__testId_0
+ORDER BY [t].[TestLevelId]
+2025-11-07 09:37:44.335 +05:30 [INF] Retrieved 3 test levels for TestId: 5
+2025-11-07 09:37:44.343 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__testLevelId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Questions] AS [q]
+WHERE [q].[TestLevelId] = @__testLevelId_0
+2025-11-07 09:37:44.375 +05:30 [INF] Executed DbCommand (27ms) [Parameters=[@__testLevelId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Questions] AS [q]
+WHERE [q].[TestLevelId] = @__testLevelId_0
+2025-11-07 09:37:44.379 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__testLevelId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Questions] AS [q]
+WHERE [q].[TestLevelId] = @__testLevelId_0
+2025-11-07 09:37:44.390 +05:30 [INF] Found 2 available tests for users out of 4 total tests
+2025-11-07 09:37:44.391 +05:30 [INF] Retrieved 2 available tests for users
+2025-11-07 09:37:44.399 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[SkillAssessmentPortal.DTOs.Test.TestResponseDto, SkillAssesmentPortal, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-07 09:37:44.418 +05:30 [INF] Executed action SkillAssessmentPortal.Controllers.TestController.GetAvailableTests (SkillAssesmentPortal) in 680.0973ms
+2025-11-07 09:37:44.425 +05:30 [INF] Executed endpoint 'SkillAssessmentPortal.Controllers.TestController.GetAvailableTests (SkillAssesmentPortal)'
+2025-11-07 09:37:44.428 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7186/api/Test/available - 200 null application/json; charset=utf-8 865.7173ms
+2025-11-07 09:39:20.865 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7186/api/TestLevel/available-tests - null null
+2025-11-07 09:39:20.879 +05:30 [INF] Executing endpoint 'SkillAssessmentPortal.Controllers.TestLevelController.GetAvailableTestsForUser (SkillAssesmentPortal)'
+2025-11-07 09:39:20.942 +05:30 [INF] Route matched with {action = "GetAvailableTestsForUser", controller = "TestLevel"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAvailableTestsForUser() on controller SkillAssessmentPortal.Controllers.TestLevelController (SkillAssesmentPortal).
+2025-11-07 09:39:20.960 +05:30 [INF] GET /api/TestLevel/available-tests - Fetching available tests for user
+2025-11-07 09:39:20.964 +05:30 [INF] Filtering available tests for user based on levels and questions
+2025-11-07 09:39:20.965 +05:30 [INF] Fetching all tests from database
+2025-11-07 09:39:20.984 +05:30 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[TestId], [t].[CategoryId], [t].[CreatedAt], [t].[CreatedBy], [t].[DurationMins], [t].[TestName], [t].[TotalMarks], [t].[TotalQuestions], [c].[CategoryId], [c].[CategoryName], [c].[Description], [u].[UserId], [u].[CreatedAt], [u].[Email], [u].[Name], [u].[PasswordHash], [u].[Role]
+FROM [Tests] AS [t]
+INNER JOIN [Categories] AS [c] ON [t].[CategoryId] = [c].[CategoryId]
+INNER JOIN [Users] AS [u] ON [t].[CreatedBy] = [u].[UserId]
+2025-11-07 09:39:20.986 +05:30 [INF] Successfully retrieved 4 tests
+2025-11-07 09:39:20.991 +05:30 [INF] Found 0 tests available for user out of 4 total tests
+2025-11-07 09:39:20.992 +05:30 [INF] Successfully retrieved 0 available tests for user
+2025-11-07 09:39:20.993 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[SkillAssessmentPortal.Models.Test, SkillAssesmentPortal, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-07 09:39:21.103 +05:30 [INF] Executed action SkillAssessmentPortal.Controllers.TestLevelController.GetAvailableTestsForUser (SkillAssesmentPortal) in 158.0704ms
+2025-11-07 09:39:21.105 +05:30 [INF] Executed endpoint 'SkillAssessmentPortal.Controllers.TestLevelController.GetAvailableTestsForUser (SkillAssesmentPortal)'
+2025-11-07 09:39:21.107 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7186/api/TestLevel/available-tests - 200 null application/json; charset=utf-8 241.798ms
+2025-11-07 09:39:28.310 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7186/api/TestLevel - null null
+2025-11-07 09:39:28.315 +05:30 [INF] Executing endpoint 'SkillAssessmentPortal.Controllers.TestLevelController.GetAll (SkillAssesmentPortal)'
+2025-11-07 09:39:28.316 +05:30 [INF] Route matched with {action = "GetAll", controller = "TestLevel"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller SkillAssessmentPortal.Controllers.TestLevelController (SkillAssesmentPortal).
+2025-11-07 09:39:28.318 +05:30 [INF] GET /api/TestLevel - Fetching all test levels
+2025-11-07 09:39:28.319 +05:30 [INF] Fetching all test levels from repository
+2025-11-07 09:39:28.319 +05:30 [INF] Fetching all test levels from database
+2025-11-07 09:39:28.331 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[TestLevelId], [t].[DurationMins], [t].[LevelName], [t].[PassingScore], [t].[TestId], [t].[VideoLink], [t0].[TestId], [t0].[CategoryId], [t0].[CreatedAt], [t0].[CreatedBy], [t0].[DurationMins], [t0].[TestName], [t0].[TotalMarks], [t0].[TotalQuestions]
+FROM [TestLevels] AS [t]
+INNER JOIN [Tests] AS [t0] ON [t].[TestId] = [t0].[TestId]
+2025-11-07 09:39:28.335 +05:30 [INF] Successfully retrieved 12 test levels from database
+2025-11-07 09:39:28.336 +05:30 [INF] Successfully retrieved 12 test levels
+2025-11-07 09:39:28.337 +05:30 [INF] Successfully retrieved 12 test levels
+2025-11-07 09:39:28.338 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[SkillAssessmentPortal.Models.TestLevel, SkillAssesmentPortal, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[SkillAssessmentPortal.DTOs.TestLevel.TestLevelResponseDto, SkillAssesmentPortal, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-07 09:39:28.339 +05:30 [INF] Executed action SkillAssessmentPortal.Controllers.TestLevelController.GetAll (SkillAssesmentPortal) in 21.1782ms
+2025-11-07 09:39:28.340 +05:30 [INF] Executed endpoint 'SkillAssessmentPortal.Controllers.TestLevelController.GetAll (SkillAssesmentPortal)'
+2025-11-07 09:39:28.342 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7186/api/TestLevel - 200 null application/json; charset=utf-8 31.9922ms
+2025-11-07 09:40:36.009 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7186/api/Question/user/5/11/8 - null null
+2025-11-07 09:40:36.018 +05:30 [INF] Executing endpoint 'SkillAssessmentPortal.Controllers.QuestionController.GetQuestionsForUser (SkillAssesmentPortal)'
+2025-11-07 09:40:36.062 +05:30 [INF] Route matched with {action = "GetQuestionsForUser", controller = "Question"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetQuestionsForUser(Int32, Int32, Int32) on controller SkillAssessmentPortal.Controllers.QuestionController (SkillAssesmentPortal).
+2025-11-07 09:40:36.098 +05:30 [INF] GET Questions for UserId: 8, TestId: 5, TestLevelId: 11
+2025-11-07 09:40:36.107 +05:30 [INF] Validating question access for UserId: 8, TestId: 5, TestLevelId: 11
+2025-11-07 09:40:36.108 +05:30 [INF] Fetching test by ID: 5
+2025-11-07 09:40:36.119 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[TestId], [t].[CategoryId], [t].[CreatedAt], [t].[CreatedBy], [t].[DurationMins], [t].[TestName], [t].[TotalMarks], [t].[TotalQuestions], [c].[CategoryId], [c].[CategoryName], [c].[Description], [u].[UserId], [u].[CreatedAt], [u].[Email], [u].[Name], [u].[PasswordHash], [u].[Role]
+FROM [Tests] AS [t]
+INNER JOIN [Categories] AS [c] ON [t].[CategoryId] = [c].[CategoryId]
+INNER JOIN [Users] AS [u] ON [t].[CreatedBy] = [u].[UserId]
+WHERE [t].[TestId] = @__id_0
+2025-11-07 09:40:36.125 +05:30 [INF] Test found for ID: 5
+2025-11-07 09:40:36.127 +05:30 [INF] Fetching test level by ID: 11
+2025-11-07 09:40:36.140 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[TestLevelId], [t].[DurationMins], [t].[LevelName], [t].[PassingScore], [t].[TestId], [t].[VideoLink], [t0].[TestId], [t0].[CategoryId], [t0].[CreatedAt], [t0].[CreatedBy], [t0].[DurationMins], [t0].[TestName], [t0].[TotalMarks], [t0].[TotalQuestions]
+FROM [TestLevels] AS [t]
+INNER JOIN [Tests] AS [t0] ON [t].[TestId] = [t0].[TestId]
+WHERE [t].[TestLevelId] = @__id_0
+2025-11-07 09:40:36.142 +05:30 [INF] Test level found for ID: 11
+2025-11-07 09:40:36.143 +05:30 [INF] Fetching test levels for TestId: 5
+2025-11-07 09:40:36.156 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[@__testId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[TestLevelId], [t].[DurationMins], [t].[LevelName], [t].[PassingScore], [t].[TestId], [t].[VideoLink], [q].[QuestionId], [q].[CorrectOption], [q].[OptionA], [q].[OptionB], [q].[OptionC], [q].[OptionD], [q].[QuestionText], [q].[TestLevelId]
+FROM [TestLevels] AS [t]
+LEFT JOIN [Questions] AS [q] ON [t].[TestLevelId] = [q].[TestLevelId]
+WHERE [t].[TestId] = @__testId_0
+ORDER BY [t].[TestLevelId]
+2025-11-07 09:40:36.159 +05:30 [INF] Retrieved 3 test levels for TestId: 5
+2025-11-07 09:40:36.282 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[@__testLevelId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [q].[QuestionId], [q].[CorrectOption], [q].[OptionA], [q].[OptionB], [q].[OptionC], [q].[OptionD], [q].[QuestionText], [q].[TestLevelId]
+FROM [Questions] AS [q]
+WHERE [q].[TestLevelId] = @__testLevelId_0
+2025-11-07 09:40:36.302 +05:30 [INF] Questions retrieved successfully for UserId: 8, Count: 10
+2025-11-07 09:40:36.304 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[SkillAssessmentPortal.DTOs.Question.QuestionResponseDto, SkillAssesmentPortal, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-07 09:40:36.326 +05:30 [INF] Executed action SkillAssessmentPortal.Controllers.QuestionController.GetQuestionsForUser (SkillAssesmentPortal) in 261.1411ms
+2025-11-07 09:40:36.328 +05:30 [INF] Executed endpoint 'SkillAssessmentPortal.Controllers.QuestionController.GetQuestionsForUser (SkillAssesmentPortal)'
+2025-11-07 09:40:36.330 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7186/api/Question/user/5/11/8 - 200 null application/json; charset=utf-8 320.7645ms
+2025-11-07 09:41:13.344 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7186/api/Question/evaluate/5/11 - application/json 59
+2025-11-07 09:41:13.364 +05:30 [INF] CORS policy execution successful.
+2025-11-07 09:41:13.367 +05:30 [INF] Executing endpoint 'SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal)'
+2025-11-07 09:41:13.375 +05:30 [INF] Route matched with {action = "EvaluateAnswers", controller = "Question"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] EvaluateAnswers(Int32, Int32, System.Collections.Generic.List`1[SkillAssessmentPortal.DTOs.Question.QuestionAnswerDto]) on controller SkillAssessmentPortal.Controllers.QuestionController (SkillAssesmentPortal).
+2025-11-07 09:41:13.422 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__testLevelId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [q].[QuestionId], [q].[CorrectOption], [q].[OptionA], [q].[OptionB], [q].[OptionC], [q].[OptionD], [q].[QuestionText], [q].[TestLevelId]
+FROM [Questions] AS [q]
+WHERE [q].[TestLevelId] = @__testLevelId_0
+2025-11-07 09:41:13.427 +05:30 [INF] Fetching test by ID: 5
+2025-11-07 09:41:13.430 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[TestId], [t].[CategoryId], [t].[CreatedAt], [t].[CreatedBy], [t].[DurationMins], [t].[TestName], [t].[TotalMarks], [t].[TotalQuestions], [c].[CategoryId], [c].[CategoryName], [c].[Description], [u].[UserId], [u].[CreatedAt], [u].[Email], [u].[Name], [u].[PasswordHash], [u].[Role]
+FROM [Tests] AS [t]
+INNER JOIN [Categories] AS [c] ON [t].[CategoryId] = [c].[CategoryId]
+INNER JOIN [Users] AS [u] ON [t].[CreatedBy] = [u].[UserId]
+WHERE [t].[TestId] = @__id_0
+2025-11-07 09:41:13.432 +05:30 [INF] Test found for ID: 5
+2025-11-07 09:41:13.435 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-07 09:41:13.439 +05:30 [INF] Executed action SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal) in 61.3314ms
+2025-11-07 09:41:13.440 +05:30 [INF] Executed endpoint 'SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal)'
+2025-11-07 09:41:13.441 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7186/api/Question/evaluate/5/11 - 200 null application/json; charset=utf-8 97.8592ms
+2025-11-07 09:41:24.937 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7186/api/Question/evaluate/5/11 - application/json 59
+2025-11-07 09:41:24.941 +05:30 [INF] CORS policy execution successful.
+2025-11-07 09:41:24.943 +05:30 [INF] Executing endpoint 'SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal)'
+2025-11-07 09:41:24.943 +05:30 [INF] Route matched with {action = "EvaluateAnswers", controller = "Question"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] EvaluateAnswers(Int32, Int32, System.Collections.Generic.List`1[SkillAssessmentPortal.DTOs.Question.QuestionAnswerDto]) on controller SkillAssessmentPortal.Controllers.QuestionController (SkillAssesmentPortal).
+2025-11-07 09:41:24.952 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__testLevelId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [q].[QuestionId], [q].[CorrectOption], [q].[OptionA], [q].[OptionB], [q].[OptionC], [q].[OptionD], [q].[QuestionText], [q].[TestLevelId]
+FROM [Questions] AS [q]
+WHERE [q].[TestLevelId] = @__testLevelId_0
+2025-11-07 09:41:24.954 +05:30 [INF] Fetching test by ID: 5
+2025-11-07 09:41:24.956 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[TestId], [t].[CategoryId], [t].[CreatedAt], [t].[CreatedBy], [t].[DurationMins], [t].[TestName], [t].[TotalMarks], [t].[TotalQuestions], [c].[CategoryId], [c].[CategoryName], [c].[Description], [u].[UserId], [u].[CreatedAt], [u].[Email], [u].[Name], [u].[PasswordHash], [u].[Role]
+FROM [Tests] AS [t]
+INNER JOIN [Categories] AS [c] ON [t].[CategoryId] = [c].[CategoryId]
+INNER JOIN [Users] AS [u] ON [t].[CreatedBy] = [u].[UserId]
+WHERE [t].[TestId] = @__id_0
+2025-11-07 09:41:24.958 +05:30 [INF] Test found for ID: 5
+2025-11-07 09:41:24.959 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-07 09:41:24.960 +05:30 [INF] Executed action SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal) in 14.9152ms
+2025-11-07 09:41:24.961 +05:30 [INF] Executed endpoint 'SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal)'
+2025-11-07 09:41:24.962 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7186/api/Question/evaluate/5/11 - 200 null application/json; charset=utf-8 25.4781ms
+2025-11-07 09:41:33.466 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7186/api/Question/evaluate/5/11 - application/json 59
+2025-11-07 09:41:33.471 +05:30 [INF] CORS policy execution successful.
+2025-11-07 09:41:33.476 +05:30 [INF] Executing endpoint 'SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal)'
+2025-11-07 09:41:33.478 +05:30 [INF] Route matched with {action = "EvaluateAnswers", controller = "Question"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] EvaluateAnswers(Int32, Int32, System.Collections.Generic.List`1[SkillAssessmentPortal.DTOs.Question.QuestionAnswerDto]) on controller SkillAssessmentPortal.Controllers.QuestionController (SkillAssesmentPortal).
+2025-11-07 09:41:33.486 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__testLevelId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [q].[QuestionId], [q].[CorrectOption], [q].[OptionA], [q].[OptionB], [q].[OptionC], [q].[OptionD], [q].[QuestionText], [q].[TestLevelId]
+FROM [Questions] AS [q]
+WHERE [q].[TestLevelId] = @__testLevelId_0
+2025-11-07 09:41:33.488 +05:30 [INF] Fetching test by ID: 5
+2025-11-07 09:41:33.490 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[TestId], [t].[CategoryId], [t].[CreatedAt], [t].[CreatedBy], [t].[DurationMins], [t].[TestName], [t].[TotalMarks], [t].[TotalQuestions], [c].[CategoryId], [c].[CategoryName], [c].[Description], [u].[UserId], [u].[CreatedAt], [u].[Email], [u].[Name], [u].[PasswordHash], [u].[Role]
+FROM [Tests] AS [t]
+INNER JOIN [Categories] AS [c] ON [t].[CategoryId] = [c].[CategoryId]
+INNER JOIN [Users] AS [u] ON [t].[CreatedBy] = [u].[UserId]
+WHERE [t].[TestId] = @__id_0
+2025-11-07 09:41:33.492 +05:30 [INF] Test found for ID: 5
+2025-11-07 09:41:33.492 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-07 09:41:33.493 +05:30 [INF] Executed action SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal) in 12.965ms
+2025-11-07 09:41:33.494 +05:30 [INF] Executed endpoint 'SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal)'
+2025-11-07 09:41:33.495 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7186/api/Question/evaluate/5/11 - 200 null application/json; charset=utf-8 28.8566ms
+2025-11-07 09:41:42.439 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7186/api/Question/evaluate/5/11 - application/json 59
+2025-11-07 09:41:42.443 +05:30 [INF] CORS policy execution successful.
+2025-11-07 09:41:42.446 +05:30 [INF] Executing endpoint 'SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal)'
+2025-11-07 09:41:42.449 +05:30 [INF] Route matched with {action = "EvaluateAnswers", controller = "Question"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] EvaluateAnswers(Int32, Int32, System.Collections.Generic.List`1[SkillAssessmentPortal.DTOs.Question.QuestionAnswerDto]) on controller SkillAssessmentPortal.Controllers.QuestionController (SkillAssesmentPortal).
+2025-11-07 09:41:42.455 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__testLevelId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [q].[QuestionId], [q].[CorrectOption], [q].[OptionA], [q].[OptionB], [q].[OptionC], [q].[OptionD], [q].[QuestionText], [q].[TestLevelId]
+FROM [Questions] AS [q]
+WHERE [q].[TestLevelId] = @__testLevelId_0
+2025-11-07 09:41:42.457 +05:30 [INF] Fetching test by ID: 5
+2025-11-07 09:41:42.459 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[TestId], [t].[CategoryId], [t].[CreatedAt], [t].[CreatedBy], [t].[DurationMins], [t].[TestName], [t].[TotalMarks], [t].[TotalQuestions], [c].[CategoryId], [c].[CategoryName], [c].[Description], [u].[UserId], [u].[CreatedAt], [u].[Email], [u].[Name], [u].[PasswordHash], [u].[Role]
+FROM [Tests] AS [t]
+INNER JOIN [Categories] AS [c] ON [t].[CategoryId] = [c].[CategoryId]
+INNER JOIN [Users] AS [u] ON [t].[CreatedBy] = [u].[UserId]
+WHERE [t].[TestId] = @__id_0
+2025-11-07 09:41:42.461 +05:30 [INF] Test found for ID: 5
+2025-11-07 09:41:42.462 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-07 09:41:42.463 +05:30 [INF] Executed action SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal) in 12.3276ms
+2025-11-07 09:41:42.465 +05:30 [INF] Executed endpoint 'SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal)'
+2025-11-07 09:41:42.466 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7186/api/Question/evaluate/5/11 - 200 null application/json; charset=utf-8 28.0883ms
+2025-11-07 09:41:51.276 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7186/api/Question/evaluate/5/11 - application/json 59
+2025-11-07 09:41:51.280 +05:30 [INF] CORS policy execution successful.
+2025-11-07 09:41:51.282 +05:30 [INF] Executing endpoint 'SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal)'
+2025-11-07 09:41:51.284 +05:30 [INF] Route matched with {action = "EvaluateAnswers", controller = "Question"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] EvaluateAnswers(Int32, Int32, System.Collections.Generic.List`1[SkillAssessmentPortal.DTOs.Question.QuestionAnswerDto]) on controller SkillAssessmentPortal.Controllers.QuestionController (SkillAssesmentPortal).
+2025-11-07 09:41:51.290 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__testLevelId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [q].[QuestionId], [q].[CorrectOption], [q].[OptionA], [q].[OptionB], [q].[OptionC], [q].[OptionD], [q].[QuestionText], [q].[TestLevelId]
+FROM [Questions] AS [q]
+WHERE [q].[TestLevelId] = @__testLevelId_0
+2025-11-07 09:41:51.293 +05:30 [INF] Fetching test by ID: 5
+2025-11-07 09:41:51.294 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[TestId], [t].[CategoryId], [t].[CreatedAt], [t].[CreatedBy], [t].[DurationMins], [t].[TestName], [t].[TotalMarks], [t].[TotalQuestions], [c].[CategoryId], [c].[CategoryName], [c].[Description], [u].[UserId], [u].[CreatedAt], [u].[Email], [u].[Name], [u].[PasswordHash], [u].[Role]
+FROM [Tests] AS [t]
+INNER JOIN [Categories] AS [c] ON [t].[CategoryId] = [c].[CategoryId]
+INNER JOIN [Users] AS [u] ON [t].[CreatedBy] = [u].[UserId]
+WHERE [t].[TestId] = @__id_0
+2025-11-07 09:41:51.297 +05:30 [INF] Test found for ID: 5
+2025-11-07 09:41:51.298 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-07 09:41:51.299 +05:30 [INF] Executed action SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal) in 13.5193ms
+2025-11-07 09:41:51.300 +05:30 [INF] Executed endpoint 'SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal)'
+2025-11-07 09:41:51.301 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7186/api/Question/evaluate/5/11 - 200 null application/json; charset=utf-8 24.8926ms
+2025-11-07 09:41:59.204 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7186/api/Question/evaluate/5/11 - application/json 59
+2025-11-07 09:41:59.223 +05:30 [INF] CORS policy execution successful.
+2025-11-07 09:41:59.225 +05:30 [INF] Executing endpoint 'SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal)'
+2025-11-07 09:41:59.226 +05:30 [INF] Route matched with {action = "EvaluateAnswers", controller = "Question"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] EvaluateAnswers(Int32, Int32, System.Collections.Generic.List`1[SkillAssessmentPortal.DTOs.Question.QuestionAnswerDto]) on controller SkillAssessmentPortal.Controllers.QuestionController (SkillAssesmentPortal).
+2025-11-07 09:41:59.234 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__testLevelId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [q].[QuestionId], [q].[CorrectOption], [q].[OptionA], [q].[OptionB], [q].[OptionC], [q].[OptionD], [q].[QuestionText], [q].[TestLevelId]
+FROM [Questions] AS [q]
+WHERE [q].[TestLevelId] = @__testLevelId_0
+2025-11-07 09:41:59.237 +05:30 [INF] Fetching test by ID: 5
+2025-11-07 09:41:59.240 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[TestId], [t].[CategoryId], [t].[CreatedAt], [t].[CreatedBy], [t].[DurationMins], [t].[TestName], [t].[TotalMarks], [t].[TotalQuestions], [c].[CategoryId], [c].[CategoryName], [c].[Description], [u].[UserId], [u].[CreatedAt], [u].[Email], [u].[Name], [u].[PasswordHash], [u].[Role]
+FROM [Tests] AS [t]
+INNER JOIN [Categories] AS [c] ON [t].[CategoryId] = [c].[CategoryId]
+INNER JOIN [Users] AS [u] ON [t].[CreatedBy] = [u].[UserId]
+WHERE [t].[TestId] = @__id_0
+2025-11-07 09:41:59.242 +05:30 [INF] Test found for ID: 5
+2025-11-07 09:41:59.243 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-07 09:41:59.244 +05:30 [INF] Executed action SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal) in 16.7343ms
+2025-11-07 09:41:59.245 +05:30 [INF] Executed endpoint 'SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal)'
+2025-11-07 09:41:59.245 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7186/api/Question/evaluate/5/11 - 200 null application/json; charset=utf-8 41.3539ms
+2025-11-07 09:42:07.237 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7186/api/Question/evaluate/5/11 - application/json 59
+2025-11-07 09:42:07.240 +05:30 [INF] CORS policy execution successful.
+2025-11-07 09:42:07.243 +05:30 [INF] Executing endpoint 'SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal)'
+2025-11-07 09:42:07.245 +05:30 [INF] Route matched with {action = "EvaluateAnswers", controller = "Question"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] EvaluateAnswers(Int32, Int32, System.Collections.Generic.List`1[SkillAssessmentPortal.DTOs.Question.QuestionAnswerDto]) on controller SkillAssessmentPortal.Controllers.QuestionController (SkillAssesmentPortal).
+2025-11-07 09:42:07.256 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__testLevelId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [q].[QuestionId], [q].[CorrectOption], [q].[OptionA], [q].[OptionB], [q].[OptionC], [q].[OptionD], [q].[QuestionText], [q].[TestLevelId]
+FROM [Questions] AS [q]
+WHERE [q].[TestLevelId] = @__testLevelId_0
+2025-11-07 09:42:07.259 +05:30 [INF] Fetching test by ID: 5
+2025-11-07 09:42:07.261 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[TestId], [t].[CategoryId], [t].[CreatedAt], [t].[CreatedBy], [t].[DurationMins], [t].[TestName], [t].[TotalMarks], [t].[TotalQuestions], [c].[CategoryId], [c].[CategoryName], [c].[Description], [u].[UserId], [u].[CreatedAt], [u].[Email], [u].[Name], [u].[PasswordHash], [u].[Role]
+FROM [Tests] AS [t]
+INNER JOIN [Categories] AS [c] ON [t].[CategoryId] = [c].[CategoryId]
+INNER JOIN [Users] AS [u] ON [t].[CreatedBy] = [u].[UserId]
+WHERE [t].[TestId] = @__id_0
+2025-11-07 09:42:07.263 +05:30 [INF] Test found for ID: 5
+2025-11-07 09:42:07.265 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-07 09:42:07.267 +05:30 [INF] Executed action SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal) in 19.223ms
+2025-11-07 09:42:07.269 +05:30 [INF] Executed endpoint 'SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal)'
+2025-11-07 09:42:07.270 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7186/api/Question/evaluate/5/11 - 200 null application/json; charset=utf-8 37.9335ms
+2025-11-07 09:42:15.950 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7186/api/Question/evaluate/5/11 - application/json 59
+2025-11-07 09:42:15.958 +05:30 [INF] CORS policy execution successful.
+2025-11-07 09:42:15.959 +05:30 [INF] Executing endpoint 'SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal)'
+2025-11-07 09:42:15.961 +05:30 [INF] Route matched with {action = "EvaluateAnswers", controller = "Question"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] EvaluateAnswers(Int32, Int32, System.Collections.Generic.List`1[SkillAssessmentPortal.DTOs.Question.QuestionAnswerDto]) on controller SkillAssessmentPortal.Controllers.QuestionController (SkillAssesmentPortal).
+2025-11-07 09:42:15.971 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__testLevelId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [q].[QuestionId], [q].[CorrectOption], [q].[OptionA], [q].[OptionB], [q].[OptionC], [q].[OptionD], [q].[QuestionText], [q].[TestLevelId]
+FROM [Questions] AS [q]
+WHERE [q].[TestLevelId] = @__testLevelId_0
+2025-11-07 09:42:15.973 +05:30 [INF] Fetching test by ID: 5
+2025-11-07 09:42:15.975 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[TestId], [t].[CategoryId], [t].[CreatedAt], [t].[CreatedBy], [t].[DurationMins], [t].[TestName], [t].[TotalMarks], [t].[TotalQuestions], [c].[CategoryId], [c].[CategoryName], [c].[Description], [u].[UserId], [u].[CreatedAt], [u].[Email], [u].[Name], [u].[PasswordHash], [u].[Role]
+FROM [Tests] AS [t]
+INNER JOIN [Categories] AS [c] ON [t].[CategoryId] = [c].[CategoryId]
+INNER JOIN [Users] AS [u] ON [t].[CreatedBy] = [u].[UserId]
+WHERE [t].[TestId] = @__id_0
+2025-11-07 09:42:15.976 +05:30 [INF] Test found for ID: 5
+2025-11-07 09:42:15.977 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-07 09:42:15.979 +05:30 [INF] Executed action SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal) in 16.0275ms
+2025-11-07 09:42:15.980 +05:30 [INF] Executed endpoint 'SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal)'
+2025-11-07 09:42:15.981 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7186/api/Question/evaluate/5/11 - 200 null application/json; charset=utf-8 31.702ms
+2025-11-07 09:42:23.539 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7186/api/Question/evaluate/5/11 - application/json 59
+2025-11-07 09:42:23.542 +05:30 [INF] CORS policy execution successful.
+2025-11-07 09:42:23.545 +05:30 [INF] Executing endpoint 'SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal)'
+2025-11-07 09:42:23.548 +05:30 [INF] Route matched with {action = "EvaluateAnswers", controller = "Question"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] EvaluateAnswers(Int32, Int32, System.Collections.Generic.List`1[SkillAssessmentPortal.DTOs.Question.QuestionAnswerDto]) on controller SkillAssessmentPortal.Controllers.QuestionController (SkillAssesmentPortal).
+2025-11-07 09:42:23.557 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__testLevelId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [q].[QuestionId], [q].[CorrectOption], [q].[OptionA], [q].[OptionB], [q].[OptionC], [q].[OptionD], [q].[QuestionText], [q].[TestLevelId]
+FROM [Questions] AS [q]
+WHERE [q].[TestLevelId] = @__testLevelId_0
+2025-11-07 09:42:23.559 +05:30 [INF] Fetching test by ID: 5
+2025-11-07 09:42:23.563 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[TestId], [t].[CategoryId], [t].[CreatedAt], [t].[CreatedBy], [t].[DurationMins], [t].[TestName], [t].[TotalMarks], [t].[TotalQuestions], [c].[CategoryId], [c].[CategoryName], [c].[Description], [u].[UserId], [u].[CreatedAt], [u].[Email], [u].[Name], [u].[PasswordHash], [u].[Role]
+FROM [Tests] AS [t]
+INNER JOIN [Categories] AS [c] ON [t].[CategoryId] = [c].[CategoryId]
+INNER JOIN [Users] AS [u] ON [t].[CreatedBy] = [u].[UserId]
+WHERE [t].[TestId] = @__id_0
+2025-11-07 09:42:23.567 +05:30 [INF] Test found for ID: 5
+2025-11-07 09:42:23.569 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-07 09:42:23.571 +05:30 [INF] Executed action SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal) in 20.7419ms
+2025-11-07 09:42:23.572 +05:30 [INF] Executed endpoint 'SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal)'
+2025-11-07 09:42:23.574 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7186/api/Question/evaluate/5/11 - 200 null application/json; charset=utf-8 34.7006ms
+2025-11-07 09:42:32.336 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7186/api/Question/evaluate/5/11 - application/json 59
+2025-11-07 09:42:32.344 +05:30 [INF] CORS policy execution successful.
+2025-11-07 09:42:32.345 +05:30 [INF] Executing endpoint 'SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal)'
+2025-11-07 09:42:32.347 +05:30 [INF] Route matched with {action = "EvaluateAnswers", controller = "Question"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] EvaluateAnswers(Int32, Int32, System.Collections.Generic.List`1[SkillAssessmentPortal.DTOs.Question.QuestionAnswerDto]) on controller SkillAssessmentPortal.Controllers.QuestionController (SkillAssesmentPortal).
+2025-11-07 09:42:32.355 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__testLevelId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [q].[QuestionId], [q].[CorrectOption], [q].[OptionA], [q].[OptionB], [q].[OptionC], [q].[OptionD], [q].[QuestionText], [q].[TestLevelId]
+FROM [Questions] AS [q]
+WHERE [q].[TestLevelId] = @__testLevelId_0
+2025-11-07 09:42:32.357 +05:30 [INF] Fetching test by ID: 5
+2025-11-07 09:42:32.359 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[TestId], [t].[CategoryId], [t].[CreatedAt], [t].[CreatedBy], [t].[DurationMins], [t].[TestName], [t].[TotalMarks], [t].[TotalQuestions], [c].[CategoryId], [c].[CategoryName], [c].[Description], [u].[UserId], [u].[CreatedAt], [u].[Email], [u].[Name], [u].[PasswordHash], [u].[Role]
+FROM [Tests] AS [t]
+INNER JOIN [Categories] AS [c] ON [t].[CategoryId] = [c].[CategoryId]
+INNER JOIN [Users] AS [u] ON [t].[CreatedBy] = [u].[UserId]
+WHERE [t].[TestId] = @__id_0
+2025-11-07 09:42:32.361 +05:30 [INF] Test found for ID: 5
+2025-11-07 09:42:32.362 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-07 09:42:32.363 +05:30 [INF] Executed action SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal) in 14.0893ms
+2025-11-07 09:42:32.365 +05:30 [INF] Executed endpoint 'SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal)'
+2025-11-07 09:42:32.366 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7186/api/Question/evaluate/5/11 - 200 null application/json; charset=utf-8 29.9958ms
+2025-11-07 09:42:58.311 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7186/api/Question/user/5/12/8 - null null
+2025-11-07 09:42:58.316 +05:30 [INF] Executing endpoint 'SkillAssessmentPortal.Controllers.QuestionController.GetQuestionsForUser (SkillAssesmentPortal)'
+2025-11-07 09:42:58.318 +05:30 [INF] Route matched with {action = "GetQuestionsForUser", controller = "Question"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetQuestionsForUser(Int32, Int32, Int32) on controller SkillAssessmentPortal.Controllers.QuestionController (SkillAssesmentPortal).
+2025-11-07 09:42:58.321 +05:30 [INF] GET Questions for UserId: 8, TestId: 5, TestLevelId: 12
+2025-11-07 09:42:58.322 +05:30 [INF] Validating question access for UserId: 8, TestId: 5, TestLevelId: 12
+2025-11-07 09:42:58.324 +05:30 [INF] Fetching test by ID: 5
+2025-11-07 09:42:58.328 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[TestId], [t].[CategoryId], [t].[CreatedAt], [t].[CreatedBy], [t].[DurationMins], [t].[TestName], [t].[TotalMarks], [t].[TotalQuestions], [c].[CategoryId], [c].[CategoryName], [c].[Description], [u].[UserId], [u].[CreatedAt], [u].[Email], [u].[Name], [u].[PasswordHash], [u].[Role]
+FROM [Tests] AS [t]
+INNER JOIN [Categories] AS [c] ON [t].[CategoryId] = [c].[CategoryId]
+INNER JOIN [Users] AS [u] ON [t].[CreatedBy] = [u].[UserId]
+WHERE [t].[TestId] = @__id_0
+2025-11-07 09:42:58.332 +05:30 [INF] Test found for ID: 5
+2025-11-07 09:42:58.333 +05:30 [INF] Fetching test level by ID: 12
+2025-11-07 09:42:58.340 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[TestLevelId], [t].[DurationMins], [t].[LevelName], [t].[PassingScore], [t].[TestId], [t].[VideoLink], [t0].[TestId], [t0].[CategoryId], [t0].[CreatedAt], [t0].[CreatedBy], [t0].[DurationMins], [t0].[TestName], [t0].[TotalMarks], [t0].[TotalQuestions]
+FROM [TestLevels] AS [t]
+INNER JOIN [Tests] AS [t0] ON [t].[TestId] = [t0].[TestId]
+WHERE [t].[TestLevelId] = @__id_0
+2025-11-07 09:42:58.342 +05:30 [INF] Test level found for ID: 12
+2025-11-07 09:42:58.343 +05:30 [INF] Fetching test levels for TestId: 5
+2025-11-07 09:42:58.350 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@__testId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[TestLevelId], [t].[DurationMins], [t].[LevelName], [t].[PassingScore], [t].[TestId], [t].[VideoLink], [q].[QuestionId], [q].[CorrectOption], [q].[OptionA], [q].[OptionB], [q].[OptionC], [q].[OptionD], [q].[QuestionText], [q].[TestLevelId]
+FROM [TestLevels] AS [t]
+LEFT JOIN [Questions] AS [q] ON [t].[TestLevelId] = [q].[TestLevelId]
+WHERE [t].[TestId] = @__testId_0
+ORDER BY [t].[TestLevelId]
+2025-11-07 09:42:58.353 +05:30 [INF] Retrieved 3 test levels for TestId: 5
+2025-11-07 09:42:58.360 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__testLevelId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [q].[QuestionId], [q].[CorrectOption], [q].[OptionA], [q].[OptionB], [q].[OptionC], [q].[OptionD], [q].[QuestionText], [q].[TestLevelId]
+FROM [Questions] AS [q]
+WHERE [q].[TestLevelId] = @__testLevelId_0
+2025-11-07 09:42:58.367 +05:30 [INF] Checking if user passed level - UserId: 8, TestId: 5, Level: Easy
+2025-11-07 09:42:58.554 +05:30 [INF] Executed DbCommand (37ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__testId_1='?' (DbType = Int32), @__levelName_2='?' (Size = 20)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Results] AS [r]
+        INNER JOIN [TestLevels] AS [t] ON [r].[TestLevelId] = [t].[TestLevelId]
+        WHERE [r].[UserId] = @__userId_0 AND [r].[TestId] = @__testId_1 AND [t].[LevelName] = @__levelName_2 AND [r].[ResultStatus] = N'Pass') THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-07 09:42:58.564 +05:30 [INF] User 8 has not passed level Easy for TestId: 5
+2025-11-07 09:42:58.567 +05:30 [WRN] Medium level access denied - Easy level not passed for UserId: 8, TestId: 5
+2025-11-07 09:42:58.567 +05:30 [WRN] Question access denied for UserId: 8, TestId: 5, TestLevelId: 12 - You must pass the Easy level before attempting Medium.
+2025-11-07 09:42:58.570 +05:30 [INF] Executing BadRequestObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-07 09:42:58.571 +05:30 [INF] Executed action SkillAssessmentPortal.Controllers.QuestionController.GetQuestionsForUser (SkillAssesmentPortal) in 251.7562ms
+2025-11-07 09:42:58.573 +05:30 [INF] Executed endpoint 'SkillAssessmentPortal.Controllers.QuestionController.GetQuestionsForUser (SkillAssesmentPortal)'
+2025-11-07 09:42:58.574 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7186/api/Question/user/5/12/8 - 400 null application/json; charset=utf-8 263.0233ms
+2025-11-07 09:43:17.326 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7186/api/Question/evaluate/5/12 - application/json 59
+2025-11-07 09:43:17.331 +05:30 [INF] CORS policy execution successful.
+2025-11-07 09:43:17.334 +05:30 [INF] Executing endpoint 'SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal)'
+2025-11-07 09:43:17.335 +05:30 [INF] Route matched with {action = "EvaluateAnswers", controller = "Question"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] EvaluateAnswers(Int32, Int32, System.Collections.Generic.List`1[SkillAssessmentPortal.DTOs.Question.QuestionAnswerDto]) on controller SkillAssessmentPortal.Controllers.QuestionController (SkillAssesmentPortal).
+2025-11-07 09:43:17.343 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__testLevelId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [q].[QuestionId], [q].[CorrectOption], [q].[OptionA], [q].[OptionB], [q].[OptionC], [q].[OptionD], [q].[QuestionText], [q].[TestLevelId]
+FROM [Questions] AS [q]
+WHERE [q].[TestLevelId] = @__testLevelId_0
+2025-11-07 09:43:17.346 +05:30 [INF] Fetching test by ID: 5
+2025-11-07 09:43:17.350 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[TestId], [t].[CategoryId], [t].[CreatedAt], [t].[CreatedBy], [t].[DurationMins], [t].[TestName], [t].[TotalMarks], [t].[TotalQuestions], [c].[CategoryId], [c].[CategoryName], [c].[Description], [u].[UserId], [u].[CreatedAt], [u].[Email], [u].[Name], [u].[PasswordHash], [u].[Role]
+FROM [Tests] AS [t]
+INNER JOIN [Categories] AS [c] ON [t].[CategoryId] = [c].[CategoryId]
+INNER JOIN [Users] AS [u] ON [t].[CreatedBy] = [u].[UserId]
+WHERE [t].[TestId] = @__id_0
+2025-11-07 09:43:17.353 +05:30 [INF] Test found for ID: 5
+2025-11-07 09:43:17.354 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-07 09:43:17.355 +05:30 [INF] Executed action SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal) in 18.6246ms
+2025-11-07 09:43:17.356 +05:30 [INF] Executed endpoint 'SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal)'
+2025-11-07 09:43:17.357 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7186/api/Question/evaluate/5/12 - 200 null application/json; charset=utf-8 32.0635ms
+2025-11-07 09:43:35.022 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7186/api/Question/evaluate/5/12 - application/json 59
+2025-11-07 09:43:35.025 +05:30 [INF] CORS policy execution successful.
+2025-11-07 09:43:35.027 +05:30 [INF] Executing endpoint 'SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal)'
+2025-11-07 09:43:35.028 +05:30 [INF] Route matched with {action = "EvaluateAnswers", controller = "Question"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] EvaluateAnswers(Int32, Int32, System.Collections.Generic.List`1[SkillAssessmentPortal.DTOs.Question.QuestionAnswerDto]) on controller SkillAssessmentPortal.Controllers.QuestionController (SkillAssesmentPortal).
+2025-11-07 09:43:35.040 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@__testLevelId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [q].[QuestionId], [q].[CorrectOption], [q].[OptionA], [q].[OptionB], [q].[OptionC], [q].[OptionD], [q].[QuestionText], [q].[TestLevelId]
+FROM [Questions] AS [q]
+WHERE [q].[TestLevelId] = @__testLevelId_0
+2025-11-07 09:43:35.043 +05:30 [INF] Fetching test by ID: 5
+2025-11-07 09:43:35.045 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[TestId], [t].[CategoryId], [t].[CreatedAt], [t].[CreatedBy], [t].[DurationMins], [t].[TestName], [t].[TotalMarks], [t].[TotalQuestions], [c].[CategoryId], [c].[CategoryName], [c].[Description], [u].[UserId], [u].[CreatedAt], [u].[Email], [u].[Name], [u].[PasswordHash], [u].[Role]
+FROM [Tests] AS [t]
+INNER JOIN [Categories] AS [c] ON [t].[CategoryId] = [c].[CategoryId]
+INNER JOIN [Users] AS [u] ON [t].[CreatedBy] = [u].[UserId]
+WHERE [t].[TestId] = @__id_0
+2025-11-07 09:43:35.050 +05:30 [INF] Test found for ID: 5
+2025-11-07 09:43:35.051 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-07 09:43:35.054 +05:30 [INF] Executed action SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal) in 22.0239ms
+2025-11-07 09:43:35.055 +05:30 [INF] Executed endpoint 'SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal)'
+2025-11-07 09:43:35.056 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7186/api/Question/evaluate/5/12 - 200 null application/json; charset=utf-8 34.9332ms
+2025-11-07 09:43:46.707 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7186/api/Question/evaluate/5/12 - application/json 59
+2025-11-07 09:43:46.721 +05:30 [INF] CORS policy execution successful.
+2025-11-07 09:43:46.723 +05:30 [INF] Executing endpoint 'SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal)'
+2025-11-07 09:43:46.727 +05:30 [INF] Route matched with {action = "EvaluateAnswers", controller = "Question"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] EvaluateAnswers(Int32, Int32, System.Collections.Generic.List`1[SkillAssessmentPortal.DTOs.Question.QuestionAnswerDto]) on controller SkillAssessmentPortal.Controllers.QuestionController (SkillAssesmentPortal).
+2025-11-07 09:43:46.734 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__testLevelId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [q].[QuestionId], [q].[CorrectOption], [q].[OptionA], [q].[OptionB], [q].[OptionC], [q].[OptionD], [q].[QuestionText], [q].[TestLevelId]
+FROM [Questions] AS [q]
+WHERE [q].[TestLevelId] = @__testLevelId_0
+2025-11-07 09:43:46.737 +05:30 [INF] Fetching test by ID: 5
+2025-11-07 09:43:46.739 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[TestId], [t].[CategoryId], [t].[CreatedAt], [t].[CreatedBy], [t].[DurationMins], [t].[TestName], [t].[TotalMarks], [t].[TotalQuestions], [c].[CategoryId], [c].[CategoryName], [c].[Description], [u].[UserId], [u].[CreatedAt], [u].[Email], [u].[Name], [u].[PasswordHash], [u].[Role]
+FROM [Tests] AS [t]
+INNER JOIN [Categories] AS [c] ON [t].[CategoryId] = [c].[CategoryId]
+INNER JOIN [Users] AS [u] ON [t].[CreatedBy] = [u].[UserId]
+WHERE [t].[TestId] = @__id_0
+2025-11-07 09:43:46.741 +05:30 [INF] Test found for ID: 5
+2025-11-07 09:43:46.742 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-07 09:43:46.744 +05:30 [INF] Executed action SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal) in 15.4921ms
+2025-11-07 09:43:46.745 +05:30 [INF] Executed endpoint 'SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal)'
+2025-11-07 09:43:46.747 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7186/api/Question/evaluate/5/12 - 200 null application/json; charset=utf-8 41.1808ms
+2025-11-07 09:44:01.058 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7186/api/Question/evaluate/5/12 - application/json 59
+2025-11-07 09:44:01.061 +05:30 [INF] CORS policy execution successful.
+2025-11-07 09:44:01.064 +05:30 [INF] Executing endpoint 'SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal)'
+2025-11-07 09:44:01.065 +05:30 [INF] Route matched with {action = "EvaluateAnswers", controller = "Question"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] EvaluateAnswers(Int32, Int32, System.Collections.Generic.List`1[SkillAssessmentPortal.DTOs.Question.QuestionAnswerDto]) on controller SkillAssessmentPortal.Controllers.QuestionController (SkillAssesmentPortal).
+2025-11-07 09:44:01.073 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__testLevelId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [q].[QuestionId], [q].[CorrectOption], [q].[OptionA], [q].[OptionB], [q].[OptionC], [q].[OptionD], [q].[QuestionText], [q].[TestLevelId]
+FROM [Questions] AS [q]
+WHERE [q].[TestLevelId] = @__testLevelId_0
+2025-11-07 09:44:01.077 +05:30 [INF] Fetching test by ID: 5
+2025-11-07 09:44:01.082 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[TestId], [t].[CategoryId], [t].[CreatedAt], [t].[CreatedBy], [t].[DurationMins], [t].[TestName], [t].[TotalMarks], [t].[TotalQuestions], [c].[CategoryId], [c].[CategoryName], [c].[Description], [u].[UserId], [u].[CreatedAt], [u].[Email], [u].[Name], [u].[PasswordHash], [u].[Role]
+FROM [Tests] AS [t]
+INNER JOIN [Categories] AS [c] ON [t].[CategoryId] = [c].[CategoryId]
+INNER JOIN [Users] AS [u] ON [t].[CreatedBy] = [u].[UserId]
+WHERE [t].[TestId] = @__id_0
+2025-11-07 09:44:01.086 +05:30 [INF] Test found for ID: 5
+2025-11-07 09:44:01.087 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-07 09:44:01.089 +05:30 [INF] Executed action SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal) in 21.5976ms
+2025-11-07 09:44:01.091 +05:30 [INF] Executed endpoint 'SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal)'
+2025-11-07 09:44:01.092 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7186/api/Question/evaluate/5/12 - 200 null application/json; charset=utf-8 35.0182ms
+2025-11-07 09:44:07.927 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7186/api/Question/evaluate/5/12 - application/json 59
+2025-11-07 09:44:07.931 +05:30 [INF] CORS policy execution successful.
+2025-11-07 09:44:07.932 +05:30 [INF] Executing endpoint 'SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal)'
+2025-11-07 09:44:07.935 +05:30 [INF] Route matched with {action = "EvaluateAnswers", controller = "Question"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] EvaluateAnswers(Int32, Int32, System.Collections.Generic.List`1[SkillAssessmentPortal.DTOs.Question.QuestionAnswerDto]) on controller SkillAssessmentPortal.Controllers.QuestionController (SkillAssesmentPortal).
+2025-11-07 09:44:07.946 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__testLevelId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [q].[QuestionId], [q].[CorrectOption], [q].[OptionA], [q].[OptionB], [q].[OptionC], [q].[OptionD], [q].[QuestionText], [q].[TestLevelId]
+FROM [Questions] AS [q]
+WHERE [q].[TestLevelId] = @__testLevelId_0
+2025-11-07 09:44:07.950 +05:30 [INF] Fetching test by ID: 5
+2025-11-07 09:44:07.953 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[TestId], [t].[CategoryId], [t].[CreatedAt], [t].[CreatedBy], [t].[DurationMins], [t].[TestName], [t].[TotalMarks], [t].[TotalQuestions], [c].[CategoryId], [c].[CategoryName], [c].[Description], [u].[UserId], [u].[CreatedAt], [u].[Email], [u].[Name], [u].[PasswordHash], [u].[Role]
+FROM [Tests] AS [t]
+INNER JOIN [Categories] AS [c] ON [t].[CategoryId] = [c].[CategoryId]
+INNER JOIN [Users] AS [u] ON [t].[CreatedBy] = [u].[UserId]
+WHERE [t].[TestId] = @__id_0
+2025-11-07 09:44:07.956 +05:30 [INF] Test found for ID: 5
+2025-11-07 09:44:07.957 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-07 09:44:07.958 +05:30 [INF] Executed action SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal) in 19.9465ms
+2025-11-07 09:44:07.959 +05:30 [INF] Executed endpoint 'SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal)'
+2025-11-07 09:44:07.959 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7186/api/Question/evaluate/5/12 - 200 null application/json; charset=utf-8 32.9192ms
+2025-11-07 09:44:13.429 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7186/api/Question/evaluate/5/12 - application/json 59
+2025-11-07 09:44:13.432 +05:30 [INF] CORS policy execution successful.
+2025-11-07 09:44:13.434 +05:30 [INF] Executing endpoint 'SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal)'
+2025-11-07 09:44:13.443 +05:30 [INF] Route matched with {action = "EvaluateAnswers", controller = "Question"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] EvaluateAnswers(Int32, Int32, System.Collections.Generic.List`1[SkillAssessmentPortal.DTOs.Question.QuestionAnswerDto]) on controller SkillAssessmentPortal.Controllers.QuestionController (SkillAssesmentPortal).
+2025-11-07 09:44:13.455 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__testLevelId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [q].[QuestionId], [q].[CorrectOption], [q].[OptionA], [q].[OptionB], [q].[OptionC], [q].[OptionD], [q].[QuestionText], [q].[TestLevelId]
+FROM [Questions] AS [q]
+WHERE [q].[TestLevelId] = @__testLevelId_0
+2025-11-07 09:44:13.457 +05:30 [INF] Fetching test by ID: 5
+2025-11-07 09:44:13.460 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[TestId], [t].[CategoryId], [t].[CreatedAt], [t].[CreatedBy], [t].[DurationMins], [t].[TestName], [t].[TotalMarks], [t].[TotalQuestions], [c].[CategoryId], [c].[CategoryName], [c].[Description], [u].[UserId], [u].[CreatedAt], [u].[Email], [u].[Name], [u].[PasswordHash], [u].[Role]
+FROM [Tests] AS [t]
+INNER JOIN [Categories] AS [c] ON [t].[CategoryId] = [c].[CategoryId]
+INNER JOIN [Users] AS [u] ON [t].[CreatedBy] = [u].[UserId]
+WHERE [t].[TestId] = @__id_0
+2025-11-07 09:44:13.466 +05:30 [INF] Test found for ID: 5
+2025-11-07 09:44:13.467 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-07 09:44:13.469 +05:30 [INF] Executed action SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal) in 20.5181ms
+2025-11-07 09:44:13.470 +05:30 [INF] Executed endpoint 'SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal)'
+2025-11-07 09:44:13.471 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7186/api/Question/evaluate/5/12 - 200 null application/json; charset=utf-8 42.6364ms
+2025-11-07 09:44:20.231 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7186/api/Question/evaluate/5/12 - application/json 59
+2025-11-07 09:44:20.246 +05:30 [INF] CORS policy execution successful.
+2025-11-07 09:44:20.251 +05:30 [INF] Executing endpoint 'SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal)'
+2025-11-07 09:44:20.252 +05:30 [INF] Route matched with {action = "EvaluateAnswers", controller = "Question"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] EvaluateAnswers(Int32, Int32, System.Collections.Generic.List`1[SkillAssessmentPortal.DTOs.Question.QuestionAnswerDto]) on controller SkillAssessmentPortal.Controllers.QuestionController (SkillAssesmentPortal).
+2025-11-07 09:44:20.260 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__testLevelId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [q].[QuestionId], [q].[CorrectOption], [q].[OptionA], [q].[OptionB], [q].[OptionC], [q].[OptionD], [q].[QuestionText], [q].[TestLevelId]
+FROM [Questions] AS [q]
+WHERE [q].[TestLevelId] = @__testLevelId_0
+2025-11-07 09:44:20.262 +05:30 [INF] Fetching test by ID: 5
+2025-11-07 09:44:20.266 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[TestId], [t].[CategoryId], [t].[CreatedAt], [t].[CreatedBy], [t].[DurationMins], [t].[TestName], [t].[TotalMarks], [t].[TotalQuestions], [c].[CategoryId], [c].[CategoryName], [c].[Description], [u].[UserId], [u].[CreatedAt], [u].[Email], [u].[Name], [u].[PasswordHash], [u].[Role]
+FROM [Tests] AS [t]
+INNER JOIN [Categories] AS [c] ON [t].[CategoryId] = [c].[CategoryId]
+INNER JOIN [Users] AS [u] ON [t].[CreatedBy] = [u].[UserId]
+WHERE [t].[TestId] = @__id_0
+2025-11-07 09:44:20.268 +05:30 [INF] Test found for ID: 5
+2025-11-07 09:44:20.269 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-07 09:44:20.270 +05:30 [INF] Executed action SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal) in 15.8966ms
+2025-11-07 09:44:20.271 +05:30 [INF] Executed endpoint 'SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal)'
+2025-11-07 09:44:20.272 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7186/api/Question/evaluate/5/12 - 200 null application/json; charset=utf-8 41.4902ms
+2025-11-07 09:44:27.297 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7186/api/Question/evaluate/5/12 - application/json 59
+2025-11-07 09:44:27.317 +05:30 [INF] CORS policy execution successful.
+2025-11-07 09:44:27.318 +05:30 [INF] Executing endpoint 'SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal)'
+2025-11-07 09:44:27.320 +05:30 [INF] Route matched with {action = "EvaluateAnswers", controller = "Question"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] EvaluateAnswers(Int32, Int32, System.Collections.Generic.List`1[SkillAssessmentPortal.DTOs.Question.QuestionAnswerDto]) on controller SkillAssessmentPortal.Controllers.QuestionController (SkillAssesmentPortal).
+2025-11-07 09:44:27.334 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__testLevelId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [q].[QuestionId], [q].[CorrectOption], [q].[OptionA], [q].[OptionB], [q].[OptionC], [q].[OptionD], [q].[QuestionText], [q].[TestLevelId]
+FROM [Questions] AS [q]
+WHERE [q].[TestLevelId] = @__testLevelId_0
+2025-11-07 09:44:27.337 +05:30 [INF] Fetching test by ID: 5
+2025-11-07 09:44:27.340 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[TestId], [t].[CategoryId], [t].[CreatedAt], [t].[CreatedBy], [t].[DurationMins], [t].[TestName], [t].[TotalMarks], [t].[TotalQuestions], [c].[CategoryId], [c].[CategoryName], [c].[Description], [u].[UserId], [u].[CreatedAt], [u].[Email], [u].[Name], [u].[PasswordHash], [u].[Role]
+FROM [Tests] AS [t]
+INNER JOIN [Categories] AS [c] ON [t].[CategoryId] = [c].[CategoryId]
+INNER JOIN [Users] AS [u] ON [t].[CreatedBy] = [u].[UserId]
+WHERE [t].[TestId] = @__id_0
+2025-11-07 09:44:27.343 +05:30 [INF] Test found for ID: 5
+2025-11-07 09:44:27.344 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-07 09:44:27.347 +05:30 [INF] Executed action SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal) in 20.2862ms
+2025-11-07 09:44:27.350 +05:30 [INF] Executed endpoint 'SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal)'
+2025-11-07 09:44:27.351 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7186/api/Question/evaluate/5/12 - 200 null application/json; charset=utf-8 56.2739ms
+2025-11-07 09:44:33.326 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7186/api/Question/evaluate/5/12 - application/json 59
+2025-11-07 09:44:33.331 +05:30 [INF] CORS policy execution successful.
+2025-11-07 09:44:33.333 +05:30 [INF] Executing endpoint 'SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal)'
+2025-11-07 09:44:33.335 +05:30 [INF] Route matched with {action = "EvaluateAnswers", controller = "Question"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] EvaluateAnswers(Int32, Int32, System.Collections.Generic.List`1[SkillAssessmentPortal.DTOs.Question.QuestionAnswerDto]) on controller SkillAssessmentPortal.Controllers.QuestionController (SkillAssesmentPortal).
+2025-11-07 09:44:33.344 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__testLevelId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [q].[QuestionId], [q].[CorrectOption], [q].[OptionA], [q].[OptionB], [q].[OptionC], [q].[OptionD], [q].[QuestionText], [q].[TestLevelId]
+FROM [Questions] AS [q]
+WHERE [q].[TestLevelId] = @__testLevelId_0
+2025-11-07 09:44:33.348 +05:30 [INF] Fetching test by ID: 5
+2025-11-07 09:44:33.350 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[TestId], [t].[CategoryId], [t].[CreatedAt], [t].[CreatedBy], [t].[DurationMins], [t].[TestName], [t].[TotalMarks], [t].[TotalQuestions], [c].[CategoryId], [c].[CategoryName], [c].[Description], [u].[UserId], [u].[CreatedAt], [u].[Email], [u].[Name], [u].[PasswordHash], [u].[Role]
+FROM [Tests] AS [t]
+INNER JOIN [Categories] AS [c] ON [t].[CategoryId] = [c].[CategoryId]
+INNER JOIN [Users] AS [u] ON [t].[CreatedBy] = [u].[UserId]
+WHERE [t].[TestId] = @__id_0
+2025-11-07 09:44:33.352 +05:30 [INF] Test found for ID: 5
+2025-11-07 09:44:33.353 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-07 09:44:33.354 +05:30 [INF] Executed action SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal) in 14.9103ms
+2025-11-07 09:44:33.355 +05:30 [INF] Executed endpoint 'SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal)'
+2025-11-07 09:44:33.356 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7186/api/Question/evaluate/5/12 - 200 null application/json; charset=utf-8 30.3673ms
+2025-11-07 09:44:55.738 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7186/api/Question/evaluate/5/12 - application/json 59
+2025-11-07 09:44:55.756 +05:30 [INF] CORS policy execution successful.
+2025-11-07 09:44:55.758 +05:30 [INF] Executing endpoint 'SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal)'
+2025-11-07 09:44:55.760 +05:30 [INF] Route matched with {action = "EvaluateAnswers", controller = "Question"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] EvaluateAnswers(Int32, Int32, System.Collections.Generic.List`1[SkillAssessmentPortal.DTOs.Question.QuestionAnswerDto]) on controller SkillAssessmentPortal.Controllers.QuestionController (SkillAssesmentPortal).
+2025-11-07 09:44:55.768 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__testLevelId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [q].[QuestionId], [q].[CorrectOption], [q].[OptionA], [q].[OptionB], [q].[OptionC], [q].[OptionD], [q].[QuestionText], [q].[TestLevelId]
+FROM [Questions] AS [q]
+WHERE [q].[TestLevelId] = @__testLevelId_0
+2025-11-07 09:44:55.771 +05:30 [INF] Fetching test by ID: 5
+2025-11-07 09:44:55.773 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[TestId], [t].[CategoryId], [t].[CreatedAt], [t].[CreatedBy], [t].[DurationMins], [t].[TestName], [t].[TotalMarks], [t].[TotalQuestions], [c].[CategoryId], [c].[CategoryName], [c].[Description], [u].[UserId], [u].[CreatedAt], [u].[Email], [u].[Name], [u].[PasswordHash], [u].[Role]
+FROM [Tests] AS [t]
+INNER JOIN [Categories] AS [c] ON [t].[CategoryId] = [c].[CategoryId]
+INNER JOIN [Users] AS [u] ON [t].[CreatedBy] = [u].[UserId]
+WHERE [t].[TestId] = @__id_0
+2025-11-07 09:44:55.775 +05:30 [INF] Test found for ID: 5
+2025-11-07 09:44:55.776 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-07 09:44:55.777 +05:30 [INF] Executed action SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal) in 13.9452ms
+2025-11-07 09:44:55.778 +05:30 [INF] Executed endpoint 'SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal)'
+2025-11-07 09:44:55.778 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7186/api/Question/evaluate/5/12 - 200 null application/json; charset=utf-8 39.8975ms
+2025-11-07 09:45:02.644 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7186/api/Question/evaluate/5/12 - application/json 59
+2025-11-07 09:45:02.646 +05:30 [INF] CORS policy execution successful.
+2025-11-07 09:45:02.647 +05:30 [INF] Executing endpoint 'SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal)'
+2025-11-07 09:45:02.647 +05:30 [INF] Route matched with {action = "EvaluateAnswers", controller = "Question"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] EvaluateAnswers(Int32, Int32, System.Collections.Generic.List`1[SkillAssessmentPortal.DTOs.Question.QuestionAnswerDto]) on controller SkillAssessmentPortal.Controllers.QuestionController (SkillAssesmentPortal).
+2025-11-07 09:45:02.653 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__testLevelId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [q].[QuestionId], [q].[CorrectOption], [q].[OptionA], [q].[OptionB], [q].[OptionC], [q].[OptionD], [q].[QuestionText], [q].[TestLevelId]
+FROM [Questions] AS [q]
+WHERE [q].[TestLevelId] = @__testLevelId_0
+2025-11-07 09:45:02.655 +05:30 [INF] Fetching test by ID: 5
+2025-11-07 09:45:02.657 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[TestId], [t].[CategoryId], [t].[CreatedAt], [t].[CreatedBy], [t].[DurationMins], [t].[TestName], [t].[TotalMarks], [t].[TotalQuestions], [c].[CategoryId], [c].[CategoryName], [c].[Description], [u].[UserId], [u].[CreatedAt], [u].[Email], [u].[Name], [u].[PasswordHash], [u].[Role]
+FROM [Tests] AS [t]
+INNER JOIN [Categories] AS [c] ON [t].[CategoryId] = [c].[CategoryId]
+INNER JOIN [Users] AS [u] ON [t].[CreatedBy] = [u].[UserId]
+WHERE [t].[TestId] = @__id_0
+2025-11-07 09:45:02.658 +05:30 [INF] Test found for ID: 5
+2025-11-07 09:45:02.659 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-07 09:45:02.660 +05:30 [INF] Executed action SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal) in 11.2109ms
+2025-11-07 09:45:02.661 +05:30 [INF] Executed endpoint 'SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal)'
+2025-11-07 09:45:02.662 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7186/api/Question/evaluate/5/12 - 200 null application/json; charset=utf-8 18.3062ms
+2025-11-07 09:45:09.555 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7186/api/Question/evaluate/5/12 - application/json 59
+2025-11-07 09:45:09.558 +05:30 [INF] CORS policy execution successful.
+2025-11-07 09:45:09.559 +05:30 [INF] Executing endpoint 'SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal)'
+2025-11-07 09:45:09.560 +05:30 [INF] Route matched with {action = "EvaluateAnswers", controller = "Question"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] EvaluateAnswers(Int32, Int32, System.Collections.Generic.List`1[SkillAssessmentPortal.DTOs.Question.QuestionAnswerDto]) on controller SkillAssessmentPortal.Controllers.QuestionController (SkillAssesmentPortal).
+2025-11-07 09:45:09.569 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__testLevelId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [q].[QuestionId], [q].[CorrectOption], [q].[OptionA], [q].[OptionB], [q].[OptionC], [q].[OptionD], [q].[QuestionText], [q].[TestLevelId]
+FROM [Questions] AS [q]
+WHERE [q].[TestLevelId] = @__testLevelId_0
+2025-11-07 09:45:09.572 +05:30 [INF] Fetching test by ID: 5
+2025-11-07 09:45:09.592 +05:30 [INF] Executed DbCommand (18ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[TestId], [t].[CategoryId], [t].[CreatedAt], [t].[CreatedBy], [t].[DurationMins], [t].[TestName], [t].[TotalMarks], [t].[TotalQuestions], [c].[CategoryId], [c].[CategoryName], [c].[Description], [u].[UserId], [u].[CreatedAt], [u].[Email], [u].[Name], [u].[PasswordHash], [u].[Role]
+FROM [Tests] AS [t]
+INNER JOIN [Categories] AS [c] ON [t].[CategoryId] = [c].[CategoryId]
+INNER JOIN [Users] AS [u] ON [t].[CreatedBy] = [u].[UserId]
+WHERE [t].[TestId] = @__id_0
+2025-11-07 09:45:09.594 +05:30 [INF] Test found for ID: 5
+2025-11-07 09:45:09.594 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-07 09:45:09.596 +05:30 [INF] Executed action SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal) in 34.5146ms
+2025-11-07 09:45:09.598 +05:30 [INF] Executed endpoint 'SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal)'
+2025-11-07 09:45:09.599 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7186/api/Question/evaluate/5/12 - 200 null application/json; charset=utf-8 44.819ms
+2025-11-07 09:45:17.018 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7186/api/Question/evaluate/5/12 - application/json 59
+2025-11-07 09:45:17.023 +05:30 [INF] CORS policy execution successful.
+2025-11-07 09:45:17.025 +05:30 [INF] Executing endpoint 'SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal)'
+2025-11-07 09:45:17.026 +05:30 [INF] Route matched with {action = "EvaluateAnswers", controller = "Question"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] EvaluateAnswers(Int32, Int32, System.Collections.Generic.List`1[SkillAssessmentPortal.DTOs.Question.QuestionAnswerDto]) on controller SkillAssessmentPortal.Controllers.QuestionController (SkillAssesmentPortal).
+2025-11-07 09:45:17.052 +05:30 [INF] Executed DbCommand (23ms) [Parameters=[@__testLevelId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [q].[QuestionId], [q].[CorrectOption], [q].[OptionA], [q].[OptionB], [q].[OptionC], [q].[OptionD], [q].[QuestionText], [q].[TestLevelId]
+FROM [Questions] AS [q]
+WHERE [q].[TestLevelId] = @__testLevelId_0
+2025-11-07 09:45:17.054 +05:30 [INF] Fetching test by ID: 5
+2025-11-07 09:45:17.064 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[TestId], [t].[CategoryId], [t].[CreatedAt], [t].[CreatedBy], [t].[DurationMins], [t].[TestName], [t].[TotalMarks], [t].[TotalQuestions], [c].[CategoryId], [c].[CategoryName], [c].[Description], [u].[UserId], [u].[CreatedAt], [u].[Email], [u].[Name], [u].[PasswordHash], [u].[Role]
+FROM [Tests] AS [t]
+INNER JOIN [Categories] AS [c] ON [t].[CategoryId] = [c].[CategoryId]
+INNER JOIN [Users] AS [u] ON [t].[CreatedBy] = [u].[UserId]
+WHERE [t].[TestId] = @__id_0
+2025-11-07 09:45:17.067 +05:30 [INF] Test found for ID: 5
+2025-11-07 09:45:17.068 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-07 09:45:17.070 +05:30 [INF] Executed action SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal) in 42.4861ms
+2025-11-07 09:45:17.071 +05:30 [INF] Executed endpoint 'SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal)'
+2025-11-07 09:45:17.073 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7186/api/Question/evaluate/5/12 - 200 null application/json; charset=utf-8 55.0032ms
+2025-11-07 09:45:29.346 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7186/api/Question/evaluate/5/13 - application/json 59
+2025-11-07 09:45:29.351 +05:30 [INF] CORS policy execution successful.
+2025-11-07 09:45:29.352 +05:30 [INF] Executing endpoint 'SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal)'
+2025-11-07 09:45:29.353 +05:30 [INF] Route matched with {action = "EvaluateAnswers", controller = "Question"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] EvaluateAnswers(Int32, Int32, System.Collections.Generic.List`1[SkillAssessmentPortal.DTOs.Question.QuestionAnswerDto]) on controller SkillAssessmentPortal.Controllers.QuestionController (SkillAssesmentPortal).
+2025-11-07 09:45:29.372 +05:30 [INF] Executed DbCommand (16ms) [Parameters=[@__testLevelId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [q].[QuestionId], [q].[CorrectOption], [q].[OptionA], [q].[OptionB], [q].[OptionC], [q].[OptionD], [q].[QuestionText], [q].[TestLevelId]
+FROM [Questions] AS [q]
+WHERE [q].[TestLevelId] = @__testLevelId_0
+2025-11-07 09:45:29.376 +05:30 [INF] Fetching test by ID: 5
+2025-11-07 09:45:29.379 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[TestId], [t].[CategoryId], [t].[CreatedAt], [t].[CreatedBy], [t].[DurationMins], [t].[TestName], [t].[TotalMarks], [t].[TotalQuestions], [c].[CategoryId], [c].[CategoryName], [c].[Description], [u].[UserId], [u].[CreatedAt], [u].[Email], [u].[Name], [u].[PasswordHash], [u].[Role]
+FROM [Tests] AS [t]
+INNER JOIN [Categories] AS [c] ON [t].[CategoryId] = [c].[CategoryId]
+INNER JOIN [Users] AS [u] ON [t].[CreatedBy] = [u].[UserId]
+WHERE [t].[TestId] = @__id_0
+2025-11-07 09:45:29.383 +05:30 [INF] Test found for ID: 5
+2025-11-07 09:45:29.384 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-07 09:45:29.387 +05:30 [INF] Executed action SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal) in 32.1584ms
+2025-11-07 09:45:29.389 +05:30 [INF] Executed endpoint 'SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal)'
+2025-11-07 09:45:29.390 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7186/api/Question/evaluate/5/13 - 200 null application/json; charset=utf-8 44.5107ms
+2025-11-07 09:45:41.929 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7186/api/Question/evaluate/5/13 - application/json 59
+2025-11-07 09:45:41.944 +05:30 [INF] CORS policy execution successful.
+2025-11-07 09:45:41.945 +05:30 [INF] Executing endpoint 'SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal)'
+2025-11-07 09:45:41.948 +05:30 [INF] Route matched with {action = "EvaluateAnswers", controller = "Question"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] EvaluateAnswers(Int32, Int32, System.Collections.Generic.List`1[SkillAssessmentPortal.DTOs.Question.QuestionAnswerDto]) on controller SkillAssessmentPortal.Controllers.QuestionController (SkillAssesmentPortal).
+2025-11-07 09:45:41.960 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@__testLevelId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [q].[QuestionId], [q].[CorrectOption], [q].[OptionA], [q].[OptionB], [q].[OptionC], [q].[OptionD], [q].[QuestionText], [q].[TestLevelId]
+FROM [Questions] AS [q]
+WHERE [q].[TestLevelId] = @__testLevelId_0
+2025-11-07 09:45:41.963 +05:30 [INF] Fetching test by ID: 5
+2025-11-07 09:45:41.967 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[TestId], [t].[CategoryId], [t].[CreatedAt], [t].[CreatedBy], [t].[DurationMins], [t].[TestName], [t].[TotalMarks], [t].[TotalQuestions], [c].[CategoryId], [c].[CategoryName], [c].[Description], [u].[UserId], [u].[CreatedAt], [u].[Email], [u].[Name], [u].[PasswordHash], [u].[Role]
+FROM [Tests] AS [t]
+INNER JOIN [Categories] AS [c] ON [t].[CategoryId] = [c].[CategoryId]
+INNER JOIN [Users] AS [u] ON [t].[CreatedBy] = [u].[UserId]
+WHERE [t].[TestId] = @__id_0
+2025-11-07 09:45:41.970 +05:30 [INF] Test found for ID: 5
+2025-11-07 09:45:41.970 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-07 09:45:41.972 +05:30 [INF] Executed action SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal) in 20.8635ms
+2025-11-07 09:45:41.973 +05:30 [INF] Executed endpoint 'SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal)'
+2025-11-07 09:45:41.975 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7186/api/Question/evaluate/5/13 - 200 null application/json; charset=utf-8 46.1027ms
+2025-11-07 09:45:49.294 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7186/api/Question/evaluate/5/13 - application/json 59
+2025-11-07 09:45:49.299 +05:30 [INF] CORS policy execution successful.
+2025-11-07 09:45:49.300 +05:30 [INF] Executing endpoint 'SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal)'
+2025-11-07 09:45:49.301 +05:30 [INF] Route matched with {action = "EvaluateAnswers", controller = "Question"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] EvaluateAnswers(Int32, Int32, System.Collections.Generic.List`1[SkillAssessmentPortal.DTOs.Question.QuestionAnswerDto]) on controller SkillAssessmentPortal.Controllers.QuestionController (SkillAssesmentPortal).
+2025-11-07 09:45:49.314 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[@__testLevelId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [q].[QuestionId], [q].[CorrectOption], [q].[OptionA], [q].[OptionB], [q].[OptionC], [q].[OptionD], [q].[QuestionText], [q].[TestLevelId]
+FROM [Questions] AS [q]
+WHERE [q].[TestLevelId] = @__testLevelId_0
+2025-11-07 09:45:49.317 +05:30 [INF] Fetching test by ID: 5
+2025-11-07 09:45:49.319 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[TestId], [t].[CategoryId], [t].[CreatedAt], [t].[CreatedBy], [t].[DurationMins], [t].[TestName], [t].[TotalMarks], [t].[TotalQuestions], [c].[CategoryId], [c].[CategoryName], [c].[Description], [u].[UserId], [u].[CreatedAt], [u].[Email], [u].[Name], [u].[PasswordHash], [u].[Role]
+FROM [Tests] AS [t]
+INNER JOIN [Categories] AS [c] ON [t].[CategoryId] = [c].[CategoryId]
+INNER JOIN [Users] AS [u] ON [t].[CreatedBy] = [u].[UserId]
+WHERE [t].[TestId] = @__id_0
+2025-11-07 09:45:49.322 +05:30 [INF] Test found for ID: 5
+2025-11-07 09:45:49.323 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-07 09:45:49.324 +05:30 [INF] Executed action SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal) in 21.127ms
+2025-11-07 09:45:49.325 +05:30 [INF] Executed endpoint 'SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal)'
+2025-11-07 09:45:49.326 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7186/api/Question/evaluate/5/13 - 200 null application/json; charset=utf-8 32.0611ms
+2025-11-07 09:45:54.380 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7186/api/Question/evaluate/5/13 - application/json 59
+2025-11-07 09:45:54.397 +05:30 [INF] CORS policy execution successful.
+2025-11-07 09:45:54.399 +05:30 [INF] Executing endpoint 'SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal)'
+2025-11-07 09:45:54.400 +05:30 [INF] Route matched with {action = "EvaluateAnswers", controller = "Question"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] EvaluateAnswers(Int32, Int32, System.Collections.Generic.List`1[SkillAssessmentPortal.DTOs.Question.QuestionAnswerDto]) on controller SkillAssessmentPortal.Controllers.QuestionController (SkillAssesmentPortal).
+2025-11-07 09:45:54.407 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__testLevelId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [q].[QuestionId], [q].[CorrectOption], [q].[OptionA], [q].[OptionB], [q].[OptionC], [q].[OptionD], [q].[QuestionText], [q].[TestLevelId]
+FROM [Questions] AS [q]
+WHERE [q].[TestLevelId] = @__testLevelId_0
+2025-11-07 09:45:54.408 +05:30 [INF] Fetching test by ID: 5
+2025-11-07 09:45:54.410 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[TestId], [t].[CategoryId], [t].[CreatedAt], [t].[CreatedBy], [t].[DurationMins], [t].[TestName], [t].[TotalMarks], [t].[TotalQuestions], [c].[CategoryId], [c].[CategoryName], [c].[Description], [u].[UserId], [u].[CreatedAt], [u].[Email], [u].[Name], [u].[PasswordHash], [u].[Role]
+FROM [Tests] AS [t]
+INNER JOIN [Categories] AS [c] ON [t].[CategoryId] = [c].[CategoryId]
+INNER JOIN [Users] AS [u] ON [t].[CreatedBy] = [u].[UserId]
+WHERE [t].[TestId] = @__id_0
+2025-11-07 09:45:54.411 +05:30 [INF] Test found for ID: 5
+2025-11-07 09:45:54.412 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-07 09:45:54.413 +05:30 [INF] Executed action SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal) in 10.9498ms
+2025-11-07 09:45:54.415 +05:30 [INF] Executed endpoint 'SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal)'
+2025-11-07 09:45:54.416 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7186/api/Question/evaluate/5/13 - 200 null application/json; charset=utf-8 36.2598ms
+2025-11-07 09:45:59.746 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7186/api/Question/evaluate/5/13 - application/json 59
+2025-11-07 09:45:59.750 +05:30 [INF] CORS policy execution successful.
+2025-11-07 09:45:59.751 +05:30 [INF] Executing endpoint 'SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal)'
+2025-11-07 09:45:59.752 +05:30 [INF] Route matched with {action = "EvaluateAnswers", controller = "Question"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] EvaluateAnswers(Int32, Int32, System.Collections.Generic.List`1[SkillAssessmentPortal.DTOs.Question.QuestionAnswerDto]) on controller SkillAssessmentPortal.Controllers.QuestionController (SkillAssesmentPortal).
+2025-11-07 09:45:59.761 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__testLevelId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [q].[QuestionId], [q].[CorrectOption], [q].[OptionA], [q].[OptionB], [q].[OptionC], [q].[OptionD], [q].[QuestionText], [q].[TestLevelId]
+FROM [Questions] AS [q]
+WHERE [q].[TestLevelId] = @__testLevelId_0
+2025-11-07 09:45:59.766 +05:30 [INF] Fetching test by ID: 5
+2025-11-07 09:45:59.768 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[TestId], [t].[CategoryId], [t].[CreatedAt], [t].[CreatedBy], [t].[DurationMins], [t].[TestName], [t].[TotalMarks], [t].[TotalQuestions], [c].[CategoryId], [c].[CategoryName], [c].[Description], [u].[UserId], [u].[CreatedAt], [u].[Email], [u].[Name], [u].[PasswordHash], [u].[Role]
+FROM [Tests] AS [t]
+INNER JOIN [Categories] AS [c] ON [t].[CategoryId] = [c].[CategoryId]
+INNER JOIN [Users] AS [u] ON [t].[CreatedBy] = [u].[UserId]
+WHERE [t].[TestId] = @__id_0
+2025-11-07 09:45:59.772 +05:30 [INF] Test found for ID: 5
+2025-11-07 09:45:59.773 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-07 09:45:59.775 +05:30 [INF] Executed action SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal) in 20.3518ms
+2025-11-07 09:45:59.777 +05:30 [INF] Executed endpoint 'SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal)'
+2025-11-07 09:45:59.778 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7186/api/Question/evaluate/5/13 - 200 null application/json; charset=utf-8 32.4291ms
+2025-11-07 09:46:08.501 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7186/api/Question/evaluate/5/13 - application/json 59
+2025-11-07 09:46:08.535 +05:30 [INF] CORS policy execution successful.
+2025-11-07 09:46:08.536 +05:30 [INF] Executing endpoint 'SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal)'
+2025-11-07 09:46:08.538 +05:30 [INF] Route matched with {action = "EvaluateAnswers", controller = "Question"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] EvaluateAnswers(Int32, Int32, System.Collections.Generic.List`1[SkillAssessmentPortal.DTOs.Question.QuestionAnswerDto]) on controller SkillAssessmentPortal.Controllers.QuestionController (SkillAssesmentPortal).
+2025-11-07 09:46:08.544 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__testLevelId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [q].[QuestionId], [q].[CorrectOption], [q].[OptionA], [q].[OptionB], [q].[OptionC], [q].[OptionD], [q].[QuestionText], [q].[TestLevelId]
+FROM [Questions] AS [q]
+WHERE [q].[TestLevelId] = @__testLevelId_0
+2025-11-07 09:46:08.549 +05:30 [INF] Fetching test by ID: 5
+2025-11-07 09:46:08.552 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[TestId], [t].[CategoryId], [t].[CreatedAt], [t].[CreatedBy], [t].[DurationMins], [t].[TestName], [t].[TotalMarks], [t].[TotalQuestions], [c].[CategoryId], [c].[CategoryName], [c].[Description], [u].[UserId], [u].[CreatedAt], [u].[Email], [u].[Name], [u].[PasswordHash], [u].[Role]
+FROM [Tests] AS [t]
+INNER JOIN [Categories] AS [c] ON [t].[CategoryId] = [c].[CategoryId]
+INNER JOIN [Users] AS [u] ON [t].[CreatedBy] = [u].[UserId]
+WHERE [t].[TestId] = @__id_0
+2025-11-07 09:46:08.555 +05:30 [INF] Test found for ID: 5
+2025-11-07 09:46:08.556 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-07 09:46:08.558 +05:30 [INF] Executed action SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal) in 18.3528ms
+2025-11-07 09:46:08.559 +05:30 [INF] Executed endpoint 'SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal)'
+2025-11-07 09:46:08.561 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7186/api/Question/evaluate/5/13 - 200 null application/json; charset=utf-8 60.2672ms
+2025-11-07 09:46:14.108 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7186/api/Question/evaluate/5/13 - application/json 59
+2025-11-07 09:46:14.113 +05:30 [INF] CORS policy execution successful.
+2025-11-07 09:46:14.114 +05:30 [INF] Executing endpoint 'SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal)'
+2025-11-07 09:46:14.115 +05:30 [INF] Route matched with {action = "EvaluateAnswers", controller = "Question"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] EvaluateAnswers(Int32, Int32, System.Collections.Generic.List`1[SkillAssessmentPortal.DTOs.Question.QuestionAnswerDto]) on controller SkillAssessmentPortal.Controllers.QuestionController (SkillAssesmentPortal).
+2025-11-07 09:46:14.120 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__testLevelId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [q].[QuestionId], [q].[CorrectOption], [q].[OptionA], [q].[OptionB], [q].[OptionC], [q].[OptionD], [q].[QuestionText], [q].[TestLevelId]
+FROM [Questions] AS [q]
+WHERE [q].[TestLevelId] = @__testLevelId_0
+2025-11-07 09:46:14.123 +05:30 [INF] Fetching test by ID: 5
+2025-11-07 09:46:14.125 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[TestId], [t].[CategoryId], [t].[CreatedAt], [t].[CreatedBy], [t].[DurationMins], [t].[TestName], [t].[TotalMarks], [t].[TotalQuestions], [c].[CategoryId], [c].[CategoryName], [c].[Description], [u].[UserId], [u].[CreatedAt], [u].[Email], [u].[Name], [u].[PasswordHash], [u].[Role]
+FROM [Tests] AS [t]
+INNER JOIN [Categories] AS [c] ON [t].[CategoryId] = [c].[CategoryId]
+INNER JOIN [Users] AS [u] ON [t].[CreatedBy] = [u].[UserId]
+WHERE [t].[TestId] = @__id_0
+2025-11-07 09:46:14.127 +05:30 [INF] Test found for ID: 5
+2025-11-07 09:46:14.128 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-07 09:46:14.129 +05:30 [INF] Executed action SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal) in 13.1038ms
+2025-11-07 09:46:14.131 +05:30 [INF] Executed endpoint 'SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal)'
+2025-11-07 09:46:14.132 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7186/api/Question/evaluate/5/13 - 200 null application/json; charset=utf-8 24.1215ms
+2025-11-07 09:46:19.134 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7186/api/Question/evaluate/5/13 - application/json 59
+2025-11-07 09:46:19.140 +05:30 [INF] CORS policy execution successful.
+2025-11-07 09:46:19.144 +05:30 [INF] Executing endpoint 'SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal)'
+2025-11-07 09:46:19.147 +05:30 [INF] Route matched with {action = "EvaluateAnswers", controller = "Question"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] EvaluateAnswers(Int32, Int32, System.Collections.Generic.List`1[SkillAssessmentPortal.DTOs.Question.QuestionAnswerDto]) on controller SkillAssessmentPortal.Controllers.QuestionController (SkillAssesmentPortal).
+2025-11-07 09:46:19.154 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__testLevelId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [q].[QuestionId], [q].[CorrectOption], [q].[OptionA], [q].[OptionB], [q].[OptionC], [q].[OptionD], [q].[QuestionText], [q].[TestLevelId]
+FROM [Questions] AS [q]
+WHERE [q].[TestLevelId] = @__testLevelId_0
+2025-11-07 09:46:19.156 +05:30 [INF] Fetching test by ID: 5
+2025-11-07 09:46:19.158 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[TestId], [t].[CategoryId], [t].[CreatedAt], [t].[CreatedBy], [t].[DurationMins], [t].[TestName], [t].[TotalMarks], [t].[TotalQuestions], [c].[CategoryId], [c].[CategoryName], [c].[Description], [u].[UserId], [u].[CreatedAt], [u].[Email], [u].[Name], [u].[PasswordHash], [u].[Role]
+FROM [Tests] AS [t]
+INNER JOIN [Categories] AS [c] ON [t].[CategoryId] = [c].[CategoryId]
+INNER JOIN [Users] AS [u] ON [t].[CreatedBy] = [u].[UserId]
+WHERE [t].[TestId] = @__id_0
+2025-11-07 09:46:19.161 +05:30 [INF] Test found for ID: 5
+2025-11-07 09:46:19.161 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-07 09:46:19.163 +05:30 [INF] Executed action SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal) in 13.7657ms
+2025-11-07 09:46:19.166 +05:30 [INF] Executed endpoint 'SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal)'
+2025-11-07 09:46:19.167 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7186/api/Question/evaluate/5/13 - 200 null application/json; charset=utf-8 33.9992ms
+2025-11-07 09:46:24.707 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7186/api/Question/evaluate/5/13 - application/json 59
+2025-11-07 09:46:24.712 +05:30 [INF] CORS policy execution successful.
+2025-11-07 09:46:24.714 +05:30 [INF] Executing endpoint 'SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal)'
+2025-11-07 09:46:24.715 +05:30 [INF] Route matched with {action = "EvaluateAnswers", controller = "Question"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] EvaluateAnswers(Int32, Int32, System.Collections.Generic.List`1[SkillAssessmentPortal.DTOs.Question.QuestionAnswerDto]) on controller SkillAssessmentPortal.Controllers.QuestionController (SkillAssesmentPortal).
+2025-11-07 09:46:24.721 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__testLevelId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [q].[QuestionId], [q].[CorrectOption], [q].[OptionA], [q].[OptionB], [q].[OptionC], [q].[OptionD], [q].[QuestionText], [q].[TestLevelId]
+FROM [Questions] AS [q]
+WHERE [q].[TestLevelId] = @__testLevelId_0
+2025-11-07 09:46:24.723 +05:30 [INF] Fetching test by ID: 5
+2025-11-07 09:46:24.725 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[TestId], [t].[CategoryId], [t].[CreatedAt], [t].[CreatedBy], [t].[DurationMins], [t].[TestName], [t].[TotalMarks], [t].[TotalQuestions], [c].[CategoryId], [c].[CategoryName], [c].[Description], [u].[UserId], [u].[CreatedAt], [u].[Email], [u].[Name], [u].[PasswordHash], [u].[Role]
+FROM [Tests] AS [t]
+INNER JOIN [Categories] AS [c] ON [t].[CategoryId] = [c].[CategoryId]
+INNER JOIN [Users] AS [u] ON [t].[CreatedBy] = [u].[UserId]
+WHERE [t].[TestId] = @__id_0
+2025-11-07 09:46:24.726 +05:30 [INF] Test found for ID: 5
+2025-11-07 09:46:24.727 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-07 09:46:24.728 +05:30 [INF] Executed action SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal) in 11.0033ms
+2025-11-07 09:46:24.728 +05:30 [INF] Executed endpoint 'SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal)'
+2025-11-07 09:46:24.730 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7186/api/Question/evaluate/5/13 - 200 null application/json; charset=utf-8 23.0644ms
+2025-11-07 09:46:32.484 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7186/api/Question/evaluate/5/13 - application/json 59
+2025-11-07 09:46:32.491 +05:30 [INF] CORS policy execution successful.
+2025-11-07 09:46:32.492 +05:30 [INF] Executing endpoint 'SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal)'
+2025-11-07 09:46:32.493 +05:30 [INF] Route matched with {action = "EvaluateAnswers", controller = "Question"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] EvaluateAnswers(Int32, Int32, System.Collections.Generic.List`1[SkillAssessmentPortal.DTOs.Question.QuestionAnswerDto]) on controller SkillAssessmentPortal.Controllers.QuestionController (SkillAssesmentPortal).
+2025-11-07 09:46:32.497 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__testLevelId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [q].[QuestionId], [q].[CorrectOption], [q].[OptionA], [q].[OptionB], [q].[OptionC], [q].[OptionD], [q].[QuestionText], [q].[TestLevelId]
+FROM [Questions] AS [q]
+WHERE [q].[TestLevelId] = @__testLevelId_0
+2025-11-07 09:46:32.501 +05:30 [INF] Fetching test by ID: 5
+2025-11-07 09:46:32.504 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[TestId], [t].[CategoryId], [t].[CreatedAt], [t].[CreatedBy], [t].[DurationMins], [t].[TestName], [t].[TotalMarks], [t].[TotalQuestions], [c].[CategoryId], [c].[CategoryName], [c].[Description], [u].[UserId], [u].[CreatedAt], [u].[Email], [u].[Name], [u].[PasswordHash], [u].[Role]
+FROM [Tests] AS [t]
+INNER JOIN [Categories] AS [c] ON [t].[CategoryId] = [c].[CategoryId]
+INNER JOIN [Users] AS [u] ON [t].[CreatedBy] = [u].[UserId]
+WHERE [t].[TestId] = @__id_0
+2025-11-07 09:46:32.505 +05:30 [INF] Test found for ID: 5
+2025-11-07 09:46:32.506 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-07 09:46:32.507 +05:30 [INF] Executed action SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal) in 13.028ms
+2025-11-07 09:46:32.508 +05:30 [INF] Executed endpoint 'SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal)'
+2025-11-07 09:46:32.509 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7186/api/Question/evaluate/5/13 - 200 null application/json; charset=utf-8 24.6244ms
+2025-11-07 09:46:40.392 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7186/api/Question/evaluate/5/13 - application/json 59
+2025-11-07 09:46:40.397 +05:30 [INF] CORS policy execution successful.
+2025-11-07 09:46:40.399 +05:30 [INF] Executing endpoint 'SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal)'
+2025-11-07 09:46:40.402 +05:30 [INF] Route matched with {action = "EvaluateAnswers", controller = "Question"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] EvaluateAnswers(Int32, Int32, System.Collections.Generic.List`1[SkillAssessmentPortal.DTOs.Question.QuestionAnswerDto]) on controller SkillAssessmentPortal.Controllers.QuestionController (SkillAssesmentPortal).
+2025-11-07 09:46:40.407 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__testLevelId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [q].[QuestionId], [q].[CorrectOption], [q].[OptionA], [q].[OptionB], [q].[OptionC], [q].[OptionD], [q].[QuestionText], [q].[TestLevelId]
+FROM [Questions] AS [q]
+WHERE [q].[TestLevelId] = @__testLevelId_0
+2025-11-07 09:46:40.411 +05:30 [INF] Fetching test by ID: 5
+2025-11-07 09:46:40.415 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[TestId], [t].[CategoryId], [t].[CreatedAt], [t].[CreatedBy], [t].[DurationMins], [t].[TestName], [t].[TotalMarks], [t].[TotalQuestions], [c].[CategoryId], [c].[CategoryName], [c].[Description], [u].[UserId], [u].[CreatedAt], [u].[Email], [u].[Name], [u].[PasswordHash], [u].[Role]
+FROM [Tests] AS [t]
+INNER JOIN [Categories] AS [c] ON [t].[CategoryId] = [c].[CategoryId]
+INNER JOIN [Users] AS [u] ON [t].[CreatedBy] = [u].[UserId]
+WHERE [t].[TestId] = @__id_0
+2025-11-07 09:46:40.419 +05:30 [INF] Test found for ID: 5
+2025-11-07 09:46:40.421 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-07 09:46:40.422 +05:30 [INF] Executed action SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal) in 17.9384ms
+2025-11-07 09:46:40.424 +05:30 [INF] Executed endpoint 'SkillAssessmentPortal.Controllers.QuestionController.EvaluateAnswers (SkillAssesmentPortal)'
+2025-11-07 09:46:40.425 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7186/api/Question/evaluate/5/13 - 200 null application/json; charset=utf-8 32.4226ms
+2025-11-07 09:46:54.803 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7186/api/Question/user/5/12/8 - null null
+2025-11-07 09:46:54.985 +05:30 [INF] Executing endpoint 'SkillAssessmentPortal.Controllers.QuestionController.GetQuestionsForUser (SkillAssesmentPortal)'
+2025-11-07 09:46:55.249 +05:30 [INF] Route matched with {action = "GetQuestionsForUser", controller = "Question"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetQuestionsForUser(Int32, Int32, Int32) on controller SkillAssessmentPortal.Controllers.QuestionController (SkillAssesmentPortal).
+2025-11-07 09:46:55.995 +05:30 [INF] GET Questions for UserId: 8, TestId: 5, TestLevelId: 12
+2025-11-07 09:46:56.014 +05:30 [INF] Validating question access for UserId: 8, TestId: 5, TestLevelId: 12
+2025-11-07 09:46:56.028 +05:30 [INF] Fetching test by ID: 5
+2025-11-07 09:46:56.058 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[TestId], [t].[CategoryId], [t].[CreatedAt], [t].[CreatedBy], [t].[DurationMins], [t].[TestName], [t].[TotalMarks], [t].[TotalQuestions], [c].[CategoryId], [c].[CategoryName], [c].[Description], [u].[UserId], [u].[CreatedAt], [u].[Email], [u].[Name], [u].[PasswordHash], [u].[Role]
+FROM [Tests] AS [t]
+INNER JOIN [Categories] AS [c] ON [t].[CategoryId] = [c].[CategoryId]
+INNER JOIN [Users] AS [u] ON [t].[CreatedBy] = [u].[UserId]
+WHERE [t].[TestId] = @__id_0
+2025-11-07 09:46:56.173 +05:30 [INF] Test found for ID: 5
+2025-11-07 09:46:56.180 +05:30 [INF] Fetching test level by ID: 12
+2025-11-07 09:46:56.231 +05:30 [INF] Executed DbCommand (46ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[TestLevelId], [t].[DurationMins], [t].[LevelName], [t].[PassingScore], [t].[TestId], [t].[VideoLink], [t0].[TestId], [t0].[CategoryId], [t0].[CreatedAt], [t0].[CreatedBy], [t0].[DurationMins], [t0].[TestName], [t0].[TotalMarks], [t0].[TotalQuestions]
+FROM [TestLevels] AS [t]
+INNER JOIN [Tests] AS [t0] ON [t].[TestId] = [t0].[TestId]
+WHERE [t].[TestLevelId] = @__id_0
+2025-11-07 09:46:56.244 +05:30 [INF] Test level found for ID: 12
+2025-11-07 09:46:56.251 +05:30 [INF] Fetching test levels for TestId: 5
+2025-11-07 09:46:56.290 +05:30 [INF] Executed DbCommand (33ms) [Parameters=[@__testId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[TestLevelId], [t].[DurationMins], [t].[LevelName], [t].[PassingScore], [t].[TestId], [t].[VideoLink], [q].[QuestionId], [q].[CorrectOption], [q].[OptionA], [q].[OptionB], [q].[OptionC], [q].[OptionD], [q].[QuestionText], [q].[TestLevelId]
+FROM [TestLevels] AS [t]
+LEFT JOIN [Questions] AS [q] ON [t].[TestLevelId] = [q].[TestLevelId]
+WHERE [t].[TestId] = @__testId_0
+ORDER BY [t].[TestLevelId]
+2025-11-07 09:46:56.308 +05:30 [INF] Retrieved 3 test levels for TestId: 5
+2025-11-07 09:46:56.331 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[@__testLevelId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [q].[QuestionId], [q].[CorrectOption], [q].[OptionA], [q].[OptionB], [q].[OptionC], [q].[OptionD], [q].[QuestionText], [q].[TestLevelId]
+FROM [Questions] AS [q]
+WHERE [q].[TestLevelId] = @__testLevelId_0
+2025-11-07 09:46:56.344 +05:30 [INF] Checking if user passed level - UserId: 8, TestId: 5, Level: Easy
+2025-11-07 09:46:56.405 +05:30 [INF] Executed DbCommand (53ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__testId_1='?' (DbType = Int32), @__levelName_2='?' (Size = 20)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Results] AS [r]
+        INNER JOIN [TestLevels] AS [t] ON [r].[TestLevelId] = [t].[TestLevelId]
+        WHERE [r].[UserId] = @__userId_0 AND [r].[TestId] = @__testId_1 AND [t].[LevelName] = @__levelName_2 AND [r].[ResultStatus] = N'Pass') THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-07 09:46:56.421 +05:30 [INF] User 8 has not passed level Easy for TestId: 5
+2025-11-07 09:46:56.430 +05:30 [WRN] Medium level access denied - Easy level not passed for UserId: 8, TestId: 5
+2025-11-07 09:46:56.436 +05:30 [WRN] Question access denied for UserId: 8, TestId: 5, TestLevelId: 12 - You must pass the Easy level before attempting Medium.
+2025-11-07 09:46:56.444 +05:30 [INF] Executing BadRequestObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-07 09:46:56.452 +05:30 [INF] Executed action SkillAssessmentPortal.Controllers.QuestionController.GetQuestionsForUser (SkillAssesmentPortal) in 462.0556ms
+2025-11-07 09:46:56.461 +05:30 [INF] Executed endpoint 'SkillAssessmentPortal.Controllers.QuestionController.GetQuestionsForUser (SkillAssesmentPortal)'
+2025-11-07 09:46:56.469 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7186/api/Question/user/5/12/8 - 400 null application/json; charset=utf-8 1665.9262ms
+2025-11-07 09:48:40.457 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7186/api/Result/user/8/test/5 - null null
+2025-11-07 09:48:40.502 +05:30 [INF] Executing endpoint 'SkillAssessmentPortal.Controllers.ResultController.GetUserResults (SkillAssesmentPortal)'
+2025-11-07 09:48:40.522 +05:30 [INF] Route matched with {action = "GetUserResults", controller = "Result"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUserResults(Int32, Int32) on controller SkillAssessmentPortal.Controllers.ResultController (SkillAssesmentPortal).
+2025-11-07 09:48:40.539 +05:30 [INF] Fetching results for UserId: 8, TestId: 5
+2025-11-07 09:48:40.588 +05:30 [INF] Executed DbCommand (18ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__testId_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[ResultId], [r].[AttemptNumber], [r].[DateAttempted], [r].[Percentage], [r].[ResultStatus], [r].[Score], [r].[Suggestion], [r].[TestId], [r].[TestLevelId], [r].[TimeTakenSecs], [r].[UserId], [t].[TestLevelId], [t].[DurationMins], [t].[LevelName], [t].[PassingScore], [t].[TestId], [t].[VideoLink]
+FROM [Results] AS [r]
+INNER JOIN [TestLevels] AS [t] ON [r].[TestLevelId] = [t].[TestLevelId]
+WHERE [r].[UserId] = @__userId_0 AND [r].[TestId] = @__testId_1
+2025-11-07 09:48:40.593 +05:30 [INF] Retrieved 0 results for UserId: 8, TestId: 5
+2025-11-07 09:48:40.598 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[SkillAssessmentPortal.Models.Result, SkillAssesmentPortal, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[SkillAssessmentPortal.DTOs.Result.ResultResponseDto, SkillAssesmentPortal, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-07 09:48:40.603 +05:30 [INF] Executed action SkillAssessmentPortal.Controllers.ResultController.GetUserResults (SkillAssesmentPortal) in 77.8086ms
+2025-11-07 09:48:40.612 +05:30 [INF] Executed endpoint 'SkillAssessmentPortal.Controllers.ResultController.GetUserResults (SkillAssesmentPortal)'
+2025-11-07 09:48:40.613 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7186/api/Result/user/8/test/5 - 200 null application/json; charset=utf-8 156.4983ms
+2025-11-07 09:48:58.225 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7186/api/Result/certificate/download/8/5 - null null
+2025-11-07 09:48:58.233 +05:30 [INF] Executing endpoint 'SkillAssessmentPortal.Controllers.ResultController.DownloadCertificate (SkillAssesmentPortal)'
+2025-11-07 09:48:58.239 +05:30 [INF] Route matched with {action = "DownloadCertificate", controller = "Result"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DownloadCertificate(Int32, Int32) on controller SkillAssessmentPortal.Controllers.ResultController (SkillAssesmentPortal).
+2025-11-07 09:48:58.245 +05:30 [INF] Certificate download requested for UserId: 8, TestId: 5
+2025-11-07 09:48:58.250 +05:30 [INF] Fetching certificate for UserId: 8, TestId: 5
+2025-11-07 09:48:58.269 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__testId_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[CertificateId], [c].[CertificateURL], [c].[IssueDate], [c].[TestId], [c].[UserId]
+FROM [Certificates] AS [c]
+WHERE [c].[UserId] = @__userId_0 AND [c].[TestId] = @__testId_1
+2025-11-07 09:48:58.274 +05:30 [INF] No certificate found for UserId: 8, TestId: 5
+2025-11-07 09:48:58.277 +05:30 [WRN] Certificate not found for UserId: 8, TestId: 5
+2025-11-07 09:48:58.279 +05:30 [INF] Executing NotFoundObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-07 09:48:58.281 +05:30 [INF] Executed action SkillAssessmentPortal.Controllers.ResultController.DownloadCertificate (SkillAssesmentPortal) in 40.1103ms
+2025-11-07 09:48:58.283 +05:30 [INF] Executed endpoint 'SkillAssessmentPortal.Controllers.ResultController.DownloadCertificate (SkillAssesmentPortal)'
+2025-11-07 09:48:58.291 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7186/api/Result/certificate/download/8/5 - 404 null application/json; charset=utf-8 65.9009ms
+2025-11-07 09:50:29.987 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7186/api/Question/user/5/11/8 - null null
+2025-11-07 09:50:30.002 +05:30 [INF] Executing endpoint 'SkillAssessmentPortal.Controllers.QuestionController.GetQuestionsForUser (SkillAssesmentPortal)'
+2025-11-07 09:50:30.003 +05:30 [INF] Route matched with {action = "GetQuestionsForUser", controller = "Question"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetQuestionsForUser(Int32, Int32, Int32) on controller SkillAssessmentPortal.Controllers.QuestionController (SkillAssesmentPortal).
+2025-11-07 09:50:30.005 +05:30 [INF] GET Questions for UserId: 8, TestId: 5, TestLevelId: 11
+2025-11-07 09:50:30.006 +05:30 [INF] Validating question access for UserId: 8, TestId: 5, TestLevelId: 11
+2025-11-07 09:50:30.007 +05:30 [INF] Fetching test by ID: 5
+2025-11-07 09:50:30.010 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[TestId], [t].[CategoryId], [t].[CreatedAt], [t].[CreatedBy], [t].[DurationMins], [t].[TestName], [t].[TotalMarks], [t].[TotalQuestions], [c].[CategoryId], [c].[CategoryName], [c].[Description], [u].[UserId], [u].[CreatedAt], [u].[Email], [u].[Name], [u].[PasswordHash], [u].[Role]
+FROM [Tests] AS [t]
+INNER JOIN [Categories] AS [c] ON [t].[CategoryId] = [c].[CategoryId]
+INNER JOIN [Users] AS [u] ON [t].[CreatedBy] = [u].[UserId]
+WHERE [t].[TestId] = @__id_0
+2025-11-07 09:50:30.012 +05:30 [INF] Test found for ID: 5
+2025-11-07 09:50:30.013 +05:30 [INF] Fetching test level by ID: 11
+2025-11-07 09:50:30.027 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[TestLevelId], [t].[DurationMins], [t].[LevelName], [t].[PassingScore], [t].[TestId], [t].[VideoLink], [t0].[TestId], [t0].[CategoryId], [t0].[CreatedAt], [t0].[CreatedBy], [t0].[DurationMins], [t0].[TestName], [t0].[TotalMarks], [t0].[TotalQuestions]
+FROM [TestLevels] AS [t]
+INNER JOIN [Tests] AS [t0] ON [t].[TestId] = [t0].[TestId]
+WHERE [t].[TestLevelId] = @__id_0
+2025-11-07 09:50:30.031 +05:30 [INF] Test level found for ID: 11
+2025-11-07 09:50:30.032 +05:30 [INF] Fetching test levels for TestId: 5
+2025-11-07 09:50:30.038 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__testId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[TestLevelId], [t].[DurationMins], [t].[LevelName], [t].[PassingScore], [t].[TestId], [t].[VideoLink], [q].[QuestionId], [q].[CorrectOption], [q].[OptionA], [q].[OptionB], [q].[OptionC], [q].[OptionD], [q].[QuestionText], [q].[TestLevelId]
+FROM [TestLevels] AS [t]
+LEFT JOIN [Questions] AS [q] ON [t].[TestLevelId] = [q].[TestLevelId]
+WHERE [t].[TestId] = @__testId_0
+ORDER BY [t].[TestLevelId]
+2025-11-07 09:50:30.041 +05:30 [INF] Retrieved 3 test levels for TestId: 5
+2025-11-07 09:50:30.047 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__testLevelId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [q].[QuestionId], [q].[CorrectOption], [q].[OptionA], [q].[OptionB], [q].[OptionC], [q].[OptionD], [q].[QuestionText], [q].[TestLevelId]
+FROM [Questions] AS [q]
+WHERE [q].[TestLevelId] = @__testLevelId_0
+2025-11-07 09:50:30.050 +05:30 [INF] Questions retrieved successfully for UserId: 8, Count: 10
+2025-11-07 09:50:30.054 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[SkillAssessmentPortal.DTOs.Question.QuestionResponseDto, SkillAssesmentPortal, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-07 09:50:30.055 +05:30 [INF] Executed action SkillAssessmentPortal.Controllers.QuestionController.GetQuestionsForUser (SkillAssesmentPortal) in 51.033ms
+2025-11-07 09:50:30.057 +05:30 [INF] Executed endpoint 'SkillAssessmentPortal.Controllers.QuestionController.GetQuestionsForUser (SkillAssesmentPortal)'
+2025-11-07 09:50:30.058 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7186/api/Question/user/5/11/8 - 200 null application/json; charset=utf-8 71.7411ms
+2025-11-07 09:50:54.721 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7186/api/Result/submit - application/json 161
+2025-11-07 09:50:54.733 +05:30 [INF] CORS policy execution successful.
+2025-11-07 09:50:54.736 +05:30 [INF] Executing endpoint 'SkillAssessmentPortal.Controllers.ResultController.SubmitResult (SkillAssesmentPortal)'
+2025-11-07 09:50:54.742 +05:30 [INF] Route matched with {action = "SubmitResult", controller = "Result"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SubmitResult(SkillAssessmentPortal.DTOs.Result.ResultCreateDto) on controller SkillAssessmentPortal.Controllers.ResultController (SkillAssesmentPortal).
+2025-11-07 09:50:54.794 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-11-07 09:50:54.876 +05:30 [INF] Executed action SkillAssessmentPortal.Controllers.ResultController.SubmitResult (SkillAssesmentPortal) in 132.8959ms
+2025-11-07 09:50:54.879 +05:30 [INF] Executed endpoint 'SkillAssessmentPortal.Controllers.ResultController.SubmitResult (SkillAssesmentPortal)'
+2025-11-07 09:50:54.881 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7186/api/Result/submit - 400 null application/problem+json; charset=utf-8 160.356ms
+2025-11-07 09:51:21.110 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7186/api/Result/submit - application/json 159
+2025-11-07 09:51:21.139 +05:30 [INF] CORS policy execution successful.
+2025-11-07 09:51:21.140 +05:30 [INF] Executing endpoint 'SkillAssessmentPortal.Controllers.ResultController.SubmitResult (SkillAssesmentPortal)'
+2025-11-07 09:51:21.141 +05:30 [INF] Route matched with {action = "SubmitResult", controller = "Result"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SubmitResult(SkillAssessmentPortal.DTOs.Result.ResultCreateDto) on controller SkillAssessmentPortal.Controllers.ResultController (SkillAssesmentPortal).
+2025-11-07 09:51:21.152 +05:30 [INF] Validating test submission for UserId: 8, TestId: 5, TestLevelId: 11
+2025-11-07 09:51:21.155 +05:30 [INF] Validating test attempt for UserId: 8, TestId: 5
+2025-11-07 09:51:21.157 +05:30 [INF] Fetching test by ID: 5
+2025-11-07 09:51:21.159 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[TestId], [t].[CategoryId], [t].[CreatedAt], [t].[CreatedBy], [t].[DurationMins], [t].[TestName], [t].[TotalMarks], [t].[TotalQuestions], [c].[CategoryId], [c].[CategoryName], [c].[Description], [u].[UserId], [u].[CreatedAt], [u].[Email], [u].[Name], [u].[PasswordHash], [u].[Role]
+FROM [Tests] AS [t]
+INNER JOIN [Categories] AS [c] ON [t].[CategoryId] = [c].[CategoryId]
+INNER JOIN [Users] AS [u] ON [t].[CreatedBy] = [u].[UserId]
+WHERE [t].[TestId] = @__id_0
+2025-11-07 09:51:21.162 +05:30 [INF] Test found for ID: 5
+2025-11-07 09:51:21.165 +05:30 [WRN] Test attempt validation failed - Test 5 expired for UserId: 8
+2025-11-07 09:51:21.166 +05:30 [WRN] Test submission validation failed for UserId: 8, TestId: 5 - Test duration expired. You can no longer attempt this test.
+2025-11-07 09:51:21.167 +05:30 [INF] Executing BadRequestObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-07 09:51:21.168 +05:30 [INF] Executed action SkillAssessmentPortal.Controllers.ResultController.SubmitResult (SkillAssesmentPortal) in 24.7997ms
+2025-11-07 09:51:21.169 +05:30 [INF] Executed endpoint 'SkillAssessmentPortal.Controllers.ResultController.SubmitResult (SkillAssesmentPortal)'
+2025-11-07 09:51:21.170 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7186/api/Result/submit - 400 null application/json; charset=utf-8 59.3638ms
+2025-11-07 12:34:33.838 +05:30 [INF] User profile is available. Using 'C:\Users\abdul\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-07 12:34:34.518 +05:30 [INF] Now listening on: https://localhost:7186
+2025-11-07 12:34:34.521 +05:30 [INF] Now listening on: http://localhost:5216
+2025-11-07 12:34:34.720 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-07 12:34:34.731 +05:30 [INF] Hosting environment: Development
+2025-11-07 12:34:34.733 +05:30 [INF] Content root path: C:\Users\abdul\Source\Repos\SkillAssesmentPortal
+2025-11-07 12:34:35.678 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7186/swagger/index.html - null null
+2025-11-07 12:34:36.338 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7186/swagger/index.html - 200 null text/html;charset=utf-8 694.6472ms
+2025-11-07 12:34:36.390 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7186/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-07 12:34:36.390 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7186/_vs/browserLink - null null
+2025-11-07 12:34:36.408 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7186/_framework/aspnetcore-browser-refresh.js - 200 16525 application/javascript; charset=utf-8 18.7091ms
+2025-11-07 12:34:36.603 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7186/_vs/browserLink - 200 null text/javascript; charset=UTF-8 213.5599ms
+2025-11-07 12:34:36.704 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7186/swagger/v1/swagger.json - null null
+2025-11-07 12:34:36.812 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7186/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 109.2479ms
+2025-11-07 15:09:33.331 +05:30 [INF] User profile is available. Using 'C:\Users\abdul\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-07 15:09:50.066 +05:30 [INF] Now listening on: https://localhost:7186
+2025-11-07 15:09:51.671 +05:30 [INF] Now listening on: http://localhost:5216
+2025-11-07 15:09:54.248 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-07 15:09:54.753 +05:30 [INF] Hosting environment: Development
+2025-11-07 15:09:55.135 +05:30 [INF] Content root path: C:\Users\abdul\Source\Repos\SkillAssesmentPortal
+2025-11-07 15:10:01.171 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7186/swagger/index.html - null null
+2025-11-07 15:10:08.245 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7186/swagger/index.html - 200 null text/html;charset=utf-8 8295.1557ms
+2025-11-07 15:10:09.422 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7186/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-07 15:10:09.581 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7186/_vs/browserLink - null null
+2025-11-07 15:10:10.242 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7186/_framework/aspnetcore-browser-refresh.js - 200 16525 application/javascript; charset=utf-8 821.0365ms
+2025-11-07 15:10:12.538 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7186/_vs/browserLink - 200 null text/javascript; charset=UTF-8 2957.5745ms
+2025-11-07 15:12:26.826 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7186/swagger/v1/swagger.json - null null
+2025-11-07 15:12:27.213 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7186/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 374.6492ms

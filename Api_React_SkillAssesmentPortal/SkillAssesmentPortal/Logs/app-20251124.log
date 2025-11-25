@@ -1,0 +1,17 @@
+2025-11-24 16:12:30.375 +05:30 [INF] User profile is available. Using 'C:\Users\abdul\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-24 16:12:31.333 +05:30 [INF] Now listening on: https://localhost:7186
+2025-11-24 16:12:31.341 +05:30 [INF] Now listening on: http://localhost:5216
+2025-11-24 16:12:31.609 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-24 16:12:31.614 +05:30 [INF] Hosting environment: Development
+2025-11-24 16:12:31.617 +05:30 [INF] Content root path: C:\Users\abdul\Source\Repos\React project\SkillAssesmentPortal\SkillAssesmentPortal
+2025-11-24 16:12:33.074 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7186/swagger/index.html - null null
+2025-11-24 16:12:34.028 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7186/swagger/index.html - 200 null text/html;charset=utf-8 982.1548ms
+2025-11-24 16:12:34.085 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7186/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-24 16:12:34.085 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7186/_vs/browserLink - null null
+2025-11-24 16:12:34.110 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7186/_framework/aspnetcore-browser-refresh.js - 200 16525 application/javascript; charset=utf-8 25.002ms
+2025-11-24 16:12:34.269 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7186/_vs/browserLink - 200 null text/javascript; charset=UTF-8 184.2284ms
+2025-11-24 16:12:34.397 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7186/swagger/v1/swagger.json - null null
+2025-11-24 16:12:34.455 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7186/swagger/favicon-32x32.png - null null
+2025-11-24 16:12:34.497 +05:30 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2025-11-24 16:12:34.502 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7186/swagger/favicon-32x32.png - 200 628 image/png 47.9478ms
+2025-11-24 16:12:34.504 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7186/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 107.3645ms
